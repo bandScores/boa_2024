@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from st_aggrid import AgGrid, GridOptionsBuilder
+from streamlit_aggrid import AgGrid, GridOptionsBuilder
 #from src.agstyler import PINLEFT, PRECISION_TWO, draw_grid
 
 st.set_page_config(layout="wide")
