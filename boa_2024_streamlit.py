@@ -175,17 +175,17 @@ if event is not None:
 if round is not None:
     gridOptions['columnDefs'].remove({'headerName': 'Round', 'field': 'Round', 'width': 80, 'pinned': 'left', 'filter': 'true'})
 
-st.markdown(
-    """
-    <style>
-    .ag-theme-streamlit {
-        width: 100vw;  /* Make grid width responsive to browser width */
-        height: 100vh;  /* Make grid height responsive to browser height */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# st.markdown(
+#     """
+#     <style>
+#     .ag-theme-streamlit {
+#         width: 100vw;  /* Make grid width responsive to browser width */
+#         height: 100vh;  /* Make grid height responsive to browser height */
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 
 grid_table = AgGrid(display, 
                     gridOptions=gridOptions,
