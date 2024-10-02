@@ -94,11 +94,11 @@ gridOptions = {
     'paginationPageSize': 100,
     'cellStyle': {'fontSize': '5px'},
     'columnDefs': [
-        {'headerName': 'Date', 'field': 'Date', 'width': 90, 'pinned': 'left', 'filter': 'true'},
-        {'headerName': 'Event', 'field': 'Event', 'width': 170, 'pinned': 'left', 'filter': 'true'},
-        {'headerName': 'Round', 'field': 'Round', 'width': 80, 'pinned': 'left', 'filter': 'true'},
+        {'headerName': 'Date', 'field': 'Date', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'},
+        {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'},
+        {'headerName': 'Round', 'field': 'Round', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'},
         {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'},
-        {'headerName': 'Class', 'field': 'Class', 'width': 80, 'pinned': 'left', 'filter': 'true'},
+        {'headerName': 'Class', 'field': 'Class', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'},
         {'headerName': 'Music Individual', 'children':[
             {'headerName': 'Score','field': 'MPI', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
              'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
@@ -179,18 +179,18 @@ if round is not None:
     gridOptions['columnDefs'].remove({'headerName': 'Round', 'field': 'Round', 'width': 80, 'pinned': 'left', 'filter': 'true'})
 
 if freeze == 'Yes':
-            gridOptions['columnDefs'][0] = {'headerName': 'Date', 'field': 'Date', 'width': 90, 'pinned': 'left', 'filter': 'true'}
-            gridOptions['columnDefs'][1] = {'headerName': 'Event', 'field': 'Event', 'width': 170, 'pinned': 'left', 'filter': 'true'}
-            gridOptions['columnDefs'][2] = {'headerName': 'Round', 'field': 'Round', 'width': 80, 'pinned': 'left', 'filter': 'true'}
+            gridOptions['columnDefs'][0] = {'headerName': 'Date', 'field': 'Date', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
+            gridOptions['columnDefs'][1] = {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
+            gridOptions['columnDefs'][2] = {'headerName': 'Round', 'field': 'Round', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
             gridOptions['columnDefs'][3] = {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
-            gridOptions['columnDefs'][4] = {'headerName': 'Class', 'field': 'Class', 'width': 80, 'pinned': 'left', 'filter': 'true'}
+            gridOptions['columnDefs'][4] = {'headerName': 'Class', 'field': 'Class', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
 
 if freeze == 'No (recommended for mobile users)':
-            gridOptions['columnDefs'][0] = {'headerName': 'Date', 'field': 'Date', 'width': 90, 'filter': 'true'}
-            gridOptions['columnDefs'][1] = {'headerName': 'Event', 'field': 'Event', 'width': 170, 'filter': 'true'}
-            gridOptions['columnDefs'][2] = {'headerName': 'Round', 'field': 'Round', 'width': 80, 'filter': 'true'}
+            gridOptions['columnDefs'][0] = {'headerName': 'Date', 'field': 'Date', 'autoWidth':'True', 'filter': 'true'}
+            gridOptions['columnDefs'][1] = {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'filter': 'true'}
+            gridOptions['columnDefs'][2] = {'headerName': 'Round', 'field': 'Round', 'autoWidth':'True', 'filter': 'true'}
             gridOptions['columnDefs'][3] = {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'filter': 'true'}
-            gridOptions['columnDefs'][4] = {'headerName': 'Class', 'field': 'Class', 'width': 80, 'filter': 'true'}
+            gridOptions['columnDefs'][4] = {'headerName': 'Class', 'field': 'Class', 'autoWidth':'True', 'filter': 'true'}
 
 
 # st.markdown(
