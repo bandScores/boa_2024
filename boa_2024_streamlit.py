@@ -87,6 +87,11 @@ gb.configure_pagination(paginationPageSize=3)  # Set the number of rows per page
 grid_options = gb.build()
 
 gridOptions = {
+    'defaultColDef': {
+        'sortable': True,
+        'filter': True,
+        'resizable': True},
+    'domLayout': 'autoHeight',
     'pagination': True,
     'paginationPageSize': 150,
     'cellStyle': {'fontSize': '5px'},
@@ -182,7 +187,8 @@ grid_table = AgGrid(display,
                     theme="streamlit",
                     enable_enterprise_modules=False,
                     fit_columns=True,
-                    height=600)
+                    style = {'width': '100%', 'height': '100%'}
+                   )
 
 
 # styled_df = display.style.set_properties(**{'text-align': 'center'})
