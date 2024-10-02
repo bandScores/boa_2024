@@ -91,7 +91,7 @@ gridOptions = {
         'sortable': True,
         'filter': True,
         'resizable': True},
-    'domLayout': 'normal',
+    'domLayout': 'autoHeight',
     'pagination': True,
     'paginationPageSize': 150,
     'cellStyle': {'fontSize': '5px'},
@@ -180,6 +180,17 @@ if event is not None:
 if round is not None:
     gridOptions['columnDefs'].remove({'headerName': 'Round', 'field': 'Round', 'width': 80, 'filter': 'true'})
 
+st.markdown(
+    """
+    <style>
+    .ag-theme-streamlit {
+        width: 100vw;  /* Make grid width responsive to browser width */
+        height: 80vh;  /* Make grid height responsive to browser height */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 grid_table = AgGrid(display, 
                     gridOptions=gridOptions,
@@ -200,8 +211,5 @@ grid_table = AgGrid(display,
 # backgroundColor="#e6e6e6"
 # secondaryBackgroundColor="#ffffff"
 # textColor="#11364d"
-
-#st.dataframe(last_20, hide_index=True, width=1000, height=750)
-#st.write(styled_df.to_html(), unsafe_allow_html=True)
 
 
