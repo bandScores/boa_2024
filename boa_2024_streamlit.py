@@ -199,7 +199,7 @@ grid_table = AgGrid(display,
                     enable_enterprise_modules=False,
                     fit_columns=True,
                     width='100%', 
-                    height='300'
+                    height='100%'
                    )
 
 
