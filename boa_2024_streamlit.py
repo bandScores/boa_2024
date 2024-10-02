@@ -159,12 +159,12 @@ gridOptions = {
         {'headerName': 'Pen','field': 'Pen', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
              'type': 'numericColumn', 'valueFormatter': 'x.toFixed(1)'}, 
         {'headerName': 'Total','field': 'Total', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
+             'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)', 'pinned': 'right'},
         {'headerName': 'Ranks', 'children':[
             {'headerName': 'Overall','field': 'Place: Overall', 'width': 90, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
              'type': 'numericColumn'},
             {'headerName': 'Class', 'field': 'Place: Class', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn'}]},
+             'type': 'numericColumn'}],  'pinned': 'right'},
     ]
 }
 
