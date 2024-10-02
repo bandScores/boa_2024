@@ -86,7 +86,7 @@ gridOptions = {
         'sortable': True,
         'filter': True,
         'resizable': True},
-    'domLayout': 'autoHeight',
+    'domLayout': 'normal',
     'pagination': True,
     'paginationPageSize': 100,
     'cellStyle': {'fontSize': '5px'},
