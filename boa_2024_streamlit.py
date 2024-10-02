@@ -185,7 +185,7 @@ st.markdown(
     <style>
     .ag-theme-streamlit {
         width: 100vw;  /* Make grid width responsive to browser width */
-        height: 80vh;  /* Make grid height responsive to browser height */
+        height: 100vh;  /* Make grid height responsive to browser height */
     }
     </style>
     """,
@@ -198,7 +198,7 @@ grid_table = AgGrid(display,
                     theme="streamlit",
                     enable_enterprise_modules=False,
                     fit_columns=True,
-                    style = {'width': '100%', 'height': '100%'}
+                    #style = {'width': '100%', 'height': '100%'}
                    )
 
 
