@@ -91,7 +91,7 @@ gridOptions = {
         'sortable': True,
         'filter': True,
         'resizable': True},
-    'domLayout': 'autoHeight',
+    'domLayout': 'normal',
     'pagination': True,
     'paginationPageSize': 150,
     'cellStyle': {'fontSize': '5px'},
@@ -183,7 +183,7 @@ if round is not None:
 
 grid_table = AgGrid(display, 
                     gridOptions=gridOptions,
-                    fit_columns_on_grid_load=True,
+                    fit_columns_on_grid_load=False,
                     theme="streamlit",
                     enable_enterprise_modules=False,
                     fit_columns=True,
