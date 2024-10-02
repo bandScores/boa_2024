@@ -194,7 +194,8 @@ grid_table = AgGrid(display,
                     enable_enterprise_modules=False,
                     fit_columns=True,
                     use_container_width=True,
-                    style={'width': '100%', 'height': '500px'}
+                    height=500
+                    #style={'width': '100%', 'height': '500px'}
                    )
 
 
