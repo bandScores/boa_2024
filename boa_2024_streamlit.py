@@ -66,7 +66,7 @@ with row_input[1]:
             display.drop('Place: Class', axis=1, inplace=True)
 
 with row_input[2]:
-    freeze = st.radio('Freeze date, event, round, school, and class columns', ['Yes', 'No (recommended for mobile users)'] 
+    freeze = st.radio('Freeze date, event, round, school, and class columns', ['Yes', 'No (recommended for mobile users)'])
 
 
 # display = display.style.format({'MPI': '{:^20.3f}', 'MPI Rank': '{:^20.0f}', 
