@@ -182,14 +182,14 @@ if freeze == 'Yes':
             gridOptions['columnDefs'][0] = {'headerName': 'Date', 'field': 'Date', 'width': 90, 'pinned': 'left', 'filter': 'true'}
             gridOptions['columnDefs'][1] = {'headerName': 'Event', 'field': 'Event', 'width': 170, 'pinned': 'left', 'filter': 'true'}
             gridOptions['columnDefs'][2] = {'headerName': 'Round', 'field': 'Round', 'width': 80, 'pinned': 'left', 'filter': 'true'}
-            gridOptions['columnDefs'][3] = {'headerName': 'School', 'field': 'School', 'width': 250, 'pinned': 'left', 'filter': 'true'}
+            gridOptions['columnDefs'][3] = {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
             gridOptions['columnDefs'][4] = {'headerName': 'Class', 'field': 'Class', 'width': 80, 'pinned': 'left', 'filter': 'true'}
 
 if freeze == 'No (recommended for mobile users)':
             gridOptions['columnDefs'][0] = {'headerName': 'Date', 'field': 'Date', 'width': 90, 'filter': 'true'}
             gridOptions['columnDefs'][1] = {'headerName': 'Event', 'field': 'Event', 'width': 170, 'filter': 'true'}
             gridOptions['columnDefs'][2] = {'headerName': 'Round', 'field': 'Round', 'width': 80, 'filter': 'true'}
-            gridOptions['columnDefs'][3] = {'headerName': 'School', 'field': 'School', 'width': 250,'filter': 'true'}
+            gridOptions['columnDefs'][3] = {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'filter': 'true'}
             gridOptions['columnDefs'][4] = {'headerName': 'Class', 'field': 'Class', 'width': 80, 'filter': 'true'}
 
 
