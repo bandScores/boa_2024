@@ -88,7 +88,7 @@ gridOptions = {
         'resizable': True},
     'domLayout': 'autoHeight',
     'pagination': True,
-    'paginationPageSize': 20,
+    'paginationPageSize': 100,
     'cellStyle': {'fontSize': '5px'},
     'columnDefs': [
         {'headerName': 'Date', 'field': 'Date', 'width': 90, 'pinned': 'left', 'filter': 'true'},
