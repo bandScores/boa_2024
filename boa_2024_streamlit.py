@@ -183,7 +183,7 @@ if round is not None:
 
 grid_table = AgGrid(display, 
                     gridOptions=gridOptions,
-                    fit_columns_on_grid_load=False,
+                    fit_columns_on_grid_load=True,
                     theme="streamlit",
                     enable_enterprise_modules=False,
                     fit_columns=True,
