@@ -162,9 +162,9 @@ gridOptions = {
              'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)', 'pinned': 'right'},
         {'headerName': 'Ranks', 'children':[
             {'headerName': 'Overall','field': 'Place: Overall', 'width': 90, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn'},
+             'type': 'numericColumn', 'pinned': 'right'},
             {'headerName': 'Class', 'field': 'Place: Class', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn'}],  'pinned': 'right'},
+             'type': 'numericColumn', 'pinned': 'right'}]},
     ]
 }
 
