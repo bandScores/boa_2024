@@ -91,11 +91,11 @@ gridOptions = {
     'paginationPageSize': 20,
     'cellStyle': {'fontSize': '5px'},
     'columnDefs': [
-        {'headerName': 'Date', 'field': 'Date', 'width': 90, 'filter': 'true'},
-        {'headerName': 'Event', 'field': 'Event', 'width': 170, 'filter': 'true'},
-        {'headerName': 'Round', 'field': 'Round', 'width': 80, 'filter': 'true'},
+        {'headerName': 'Date', 'field': 'Date', 'width': 90, 'pinned': 'left', 'filter': 'true'},
+        {'headerName': 'Event', 'field': 'Event', 'width': 170, 'pinned': 'left', 'filter': 'true'},
+        {'headerName': 'Round', 'field': 'Round', 'width': 80, 'pinned': 'left', 'filter': 'true'},
         {'headerName': 'School', 'field': 'School', 'width': 250, 'pinned': 'left', 'filter': 'true'},
-        {'headerName': 'Class', 'field': 'Class', 'width': 80, 'filter': 'true'},
+        {'headerName': 'Class', 'field': 'Class', 'width': 80, 'pinned': 'left', 'filter': 'true'},
         {'headerName': 'Music Individual', 'children':[
             {'headerName': 'Score','field': 'MPI', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
              'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
@@ -170,10 +170,10 @@ if round == 'Finals':
         {'headerName': 'Overall.','field': 'Place: Overall','width': 90,
          'headerClass': 'left-header', 'cellStyle': {'textAlign': 'center'},'type': 'numericColumn'}]}
 if event is not None:
-    gridOptions['columnDefs'].remove({'headerName': 'Date', 'field': 'Date', 'width': 90, 'filter': 'true'})
-    gridOptions['columnDefs'].remove({'headerName': 'Event', 'field': 'Event', 'width': 170, 'filter': 'true'})
+    gridOptions['columnDefs'].remove({'headerName': 'Date', 'field': 'Date', 'width': 90, 'pinned': 'left', 'filter': 'true'})
+    gridOptions['columnDefs'].remove({'headerName': 'Event', 'field': 'Event', 'width': 170, 'pinned': 'left', 'filter': 'true'})
 if round is not None:
-    gridOptions['columnDefs'].remove({'headerName': 'Round', 'field': 'Round', 'width': 80, 'filter': 'true'})
+    gridOptions['columnDefs'].remove({'headerName': 'Round', 'field': 'Round', 'width': 80, 'pinned': 'left', 'filter': 'true'})
 
 st.markdown(
     """
