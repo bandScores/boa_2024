@@ -97,7 +97,7 @@ gridOptions = {
         {'headerName': 'Date', 'field': 'Date', 'width': 90, 'pinned': 'left', 'filter': 'true'},
         {'headerName': 'Event', 'field': 'Event', 'width': 170, 'pinned': 'left', 'filter': 'true'},
         {'headerName': 'Round', 'field': 'Round', 'width': 80, 'pinned': 'left', 'filter': 'true'},
-        {'headerName': 'School', 'field': 'School', 'width': 250, 'pinned': 'left', 'filter': 'true'},
+        {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'},
         {'headerName': 'Class', 'field': 'Class', 'width': 80, 'pinned': 'left', 'filter': 'true'},
         {'headerName': 'Music Individual', 'children':[
             {'headerName': 'Score','field': 'MPI', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
