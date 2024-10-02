@@ -81,11 +81,6 @@ with row_input[1]:
 #                                   'Pen': '{:^20.0f}',  'Total': '{:^20.3f}',  
 #                                   'Place: Class': '{:^20.0f}',  'Place: Overall': '{:^20.0f}'})
 
-gb = GridOptionsBuilder.from_dataframe(display)
-gb.configure_default_column(resizable=True)
-gb.configure_pagination(paginationPageSize=3)  # Set the number of rows per page
-grid_options = gb.build()
-
 gridOptions = {
     'defaultColDef': {
         'sortable': True,
@@ -180,17 +175,17 @@ if event is not None:
 if round is not None:
     gridOptions['columnDefs'].remove({'headerName': 'Round', 'field': 'Round', 'width': 80, 'filter': 'true'})
 
-# st.markdown(
-#     """
-#     <style>
-#     .ag-theme-streamlit {
-#         width: 100vw;  /* Make grid width responsive to browser width */
-#         height: 100vh;  /* Make grid height responsive to browser height */
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
+st.markdown(
+    """
+    <style>
+    .ag-theme-streamlit {
+        width: 100vw;  /* Make grid width responsive to browser width */
+        height: 100vh;  /* Make grid height responsive to browser height */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 grid_table = AgGrid(display, 
                     gridOptions=gridOptions,
