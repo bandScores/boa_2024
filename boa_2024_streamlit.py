@@ -94,7 +94,7 @@ gridOptions = {
     'paginationPageSize': 100,
     'cellStyle': {'fontSize': '5px'},
     'columnDefs': [
-        {'headerName': 'Date', 'field': 'Date', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'},
+        {'headerName': 'Date', 'field': 'Date', 'maxWidth':80, 'pinned': 'left', 'filter': 'true'},
         {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'},
         {'headerName': 'Round', 'field': 'Round', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'},
         {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'},
@@ -179,14 +179,14 @@ if round is not None:
     gridOptions['columnDefs'].remove({'headerName': 'Round', 'field': 'Round', 'width': 80, 'pinned': 'left', 'filter': 'true'})
 
 if freeze == 'Yes':
-            gridOptions['columnDefs'][0] = {'headerName': 'Date', 'field': 'Date', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
+            gridOptions['columnDefs'][0] = {'headerName': 'Date', 'field': 'Date', 'maxWidth':80, 'pinned': 'left', 'filter': 'true'}
             gridOptions['columnDefs'][1] = {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
             gridOptions['columnDefs'][2] = {'headerName': 'Round', 'field': 'Round', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
             gridOptions['columnDefs'][3] = {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
             gridOptions['columnDefs'][4] = {'headerName': 'Class', 'field': 'Class', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
 
 if freeze == 'No (recommended for mobile users)':
-            gridOptions['columnDefs'][0] = {'headerName': 'Date', 'field': 'Date', 'autoWidth':'True', 'filter': 'true'}
+            gridOptions['columnDefs'][0] = {'headerName': 'Date', 'field': 'Date', 'maxWidth':80, 'filter': 'true'}
             gridOptions['columnDefs'][1] = {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'filter': 'true'}
             gridOptions['columnDefs'][2] = {'headerName': 'Round', 'field': 'Round', 'autoWidth':'True', 'filter': 'true'}
             gridOptions['columnDefs'][3] = {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'filter': 'true'}
