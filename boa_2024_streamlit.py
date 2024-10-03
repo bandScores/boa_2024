@@ -85,20 +85,20 @@ row_input = st.columns((1,1,1))
 
 with row_input[0]:
     event = st.selectbox('Select Event', list(display['Event'].unique()), placeholder='', index=None)
-    if event is not None:
-        fitered_string1 = 'Event=="'+event+'"'
-        display = display.query(fitered_string1)
-        display.drop('Date', axis=1, inplace=True)
-        display.drop('Event', axis=1, inplace=True)
+    # if event is not None:
+    #     fitered_string1 = 'Event=="'+event+'"'
+    #     display = display.query(fitered_string1)
+    #     display.drop('Date', axis=1, inplace=True)
+    #     display.drop('Event', axis=1, inplace=True)
         
 with row_input[1]:    
     round = st.selectbox('Select Show Round', list(display['Round'].unique()), placeholder='', index=None)
-    if round is not None:
-        fitered_string2 = 'Round=="'+round+'"'
-        display = display.query(fitered_string2)
-        display.drop('Round', axis=1, inplace=True)
-        if round == 'Finals':
-            display.drop('Place: Class', axis=1, inplace=True)
+    # if round is not None:
+    #     fitered_string2 = 'Round=="'+round+'"'
+    #     display = display.query(fitered_string2)
+    #     display.drop('Round', axis=1, inplace=True)
+    #     if round == 'Finals':
+    #         display.drop('Place: Class', axis=1, inplace=True)
 
 #with row_input[2]:
 freeze = st.radio('Freeze Date, Event, Round, School, and Class columns', ['Yes', 'No (recommended for mobile users)'])
