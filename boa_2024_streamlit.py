@@ -127,7 +127,7 @@ gridOptions = {
         {'headerName': 'Event', 'field': 'Event', 'width':150, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #auto
         {'headerName': 'Round', 'field': 'Round', 'width':80, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #80
         {'headerName': 'School', 'field': 'School', 'width':180, 'pinned':'left', 'filter': 'true'}, #auto
-        {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true', 'hide':'true', "cellStyle": {"border-right": "8px solid #FF0000"}}, #70
+        {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true', 'hide':'true', "cellStyle": {"border-right": "4px solid #FF0000"}}, #70
         
         {'headerName': 'MPI', 'field': 'MPI', 'width':90, 
          "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
@@ -137,7 +137,7 @@ gridOptions = {
          "valueGetter": "data.MPE.toFixed(3) + '  (' + data.MPE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPE - nodeB.data.MPE; }"},     
-        {'headerName': 'Music', 'field': 'Mus_Avg', 'width':90,  "cellStyle": {"border-right": "8px solid #FF0000"}, 
+        {'headerName': 'Music', 'field': 'Mus_Avg', 'width':90,  "cellStyle": {"border-right": "4px solid #FF0000"}, 
          "valueGetter": "data.Mus_Avg.toFixed(3) + '  (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"},
@@ -150,7 +150,7 @@ gridOptions = {
          "valueGetter": "data.VPE.toFixed(3) + '  (' + data.VPE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VPE - nodeB.data.VPE; }"},     
-        {'headerName': 'Visual', 'field': 'Vis_Avg', 'width':90, "cellStyle": {"border-right": "8px solid #FF0000"},
+        {'headerName': 'Visual', 'field': 'Vis_Avg', 'width':90, "cellStyle": {"border-right": "4px solid #FF0000"},
          "valueGetter": "data.Vis_Avg.toFixed(3) + '  (' + data.Vis_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Vis_Avg - nodeB.data.Vis_Avg; }"},
@@ -163,7 +163,7 @@ gridOptions = {
          "valueGetter": "data.MGE2.toFixed(3) + '  (' + data.MGE2_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VPE - nodeB.data.VPE; }"},     
-        {'headerName': 'MGE Total', 'field': 'MGE_Tot', 'width':100, "cellStyle": {"border-right": "8px solid #FF0000"},
+        {'headerName': 'MGE Total', 'field': 'MGE_Tot', 'width':100, "cellStyle": {"border-right": "4px solid #FF0000"},
          "valueGetter": "data.MGE_Tot.toFixed(3) + '  (' + data.MGE_Tot_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MGE_Tot - nodeB.data.MGE_Tot; }"},
@@ -172,7 +172,7 @@ gridOptions = {
          "valueGetter": "data.VGE.toFixed(3) + '  (' + data.VGE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VGE - nodeB.data.VGE; }"},
-        {'headerName': 'GE Total', 'field': 'GE_Tot', 'width':90, "cellStyle": {"border-right": "8px solid #FF0000"},
+        {'headerName': 'GE Total', 'field': 'GE_Tot', 'width':90, "cellStyle": {"border-right": "4px solid #FF0000"},
          "valueGetter": "data.GE_Tot.toFixed(3) + '  (' + data.GE_Tot_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.GE_Tot - nodeB.data.GE_Tot; }"},
