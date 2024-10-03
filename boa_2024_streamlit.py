@@ -96,7 +96,7 @@ gridOptions = {
     'columnDefs': [
         {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned': 'left', 'filter': 'true'},
         {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'},
-        {'headerName': 'Round', 'field': 'Round', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'},
+        {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned': 'left', 'filter': 'true'},
         {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'},
         {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned': 'left', 'filter': 'true'},
         {'headerName': 'Music Individual', 'children':[
@@ -176,7 +176,7 @@ if event is not None:
     gridOptions['columnDefs'].remove({'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned': 'left', 'filter': 'true'})
     gridOptions['columnDefs'].remove({'headerName': 'Event', 'field': 'Event', 'width': 170, 'pinned': 'left', 'filter': 'true'})
 if round is not None:
-    gridOptions['columnDefs'].remove({'headerName': 'Round', 'field': 'Round', 'maxWidth': 80, 'pinned': 'left', 'filter': 'true'})
+    gridOptions['columnDefs'].remove({'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned': 'left', 'filter': 'true'})
 
 if freeze == 'Yes':
             gridOptions['columnDefs'][0] = {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned': 'left', 'filter': 'true'}
