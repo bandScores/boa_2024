@@ -179,7 +179,7 @@ gridOptions = {
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Total - nodeB.data.Total; }"},
 
-        {'headerName': 'Class', 'field': 'Place_Class', 'width':70, 'valueFormatter': 'x.toFixed(0)', 'sortable':True},
+        {'headerName': 'Class', 'field': 'Place_Class', 'width':70, 'valueFormatter': 'x.toFixed(0)', 'sortable':True, 'hide':'true'},
 
         
         
@@ -210,18 +210,21 @@ gridOptions = {
 }
 
 if freeze != 'Yes':
-            gridOptions['columnDefs'][0].pop('pinned', None)
-            gridOptions['columnDefs'][1].pop('pinned', None)
-            gridOptions['columnDefs'][2].pop('pinned', None)
-            gridOptions['columnDefs'][3].pop('pinned', None)
-            gridOptions['columnDefs'][4].pop('pinned', None)
+    gridOptions['columnDefs'][0].pop('pinned', None)
+    gridOptions['columnDefs'][1].pop('pinned', None)
+    gridOptions['columnDefs'][2].pop('pinned', None)
+    gridOptions['columnDefs'][3].pop('pinned', None)
+    gridOptions['columnDefs'][4].pop('pinned', None)
 
 if event is None: 
-            gridOptions['columnDefs'][0].pop('hide', None)
-            gridOptions['columnDefs'][1].pop('hide', None)
+    gridOptions['columnDefs'][0].pop('hide', None)
+    gridOptions['columnDefs'][1].pop('hide', None)
 
 if round is None:
-            gridOptions['columnDefs'][2].pop('hide', None)
+    gridOptions['columnDefs'][2].pop('hide', None)
+if round is "Finals":
+    gridOptions['columnDefs'][-1].pop('hide', None)
+    
 
 # st.markdown(
 #     """
