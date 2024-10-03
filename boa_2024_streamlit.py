@@ -96,9 +96,12 @@ with row_input[1]:
     if round is not None:
         fitered_string2 = 'Round=="'+round+'"'
         display = display.query(fitered_string2)
-    #     display.drop('Round', axis=1, inplace=True)
-    #     if round == 'Finals':
-    #         display.drop('Place: Class', axis=1, inplace=True)
+
+with row_input[2]:    
+    class_ = st.selectbox('Select Class', ['AAAA', 'AAA', 'AA', 'A'], placeholder='', index=None)
+    if class_ is not None:
+        fitered_string3 = 'Round=="'+class_+'"'
+        display = display.query(fitered_string3)
 
 #with row_input[2]:
 freeze = st.radio('Freeze Date, Event, Round, School, and Class columns', ['Yes', 'No (recommended for mobile users)'])
@@ -117,7 +120,7 @@ gridOptions = {
         {'headerName': 'Event', 'field': 'Event', 'width':150, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #auto
         {'headerName': 'Round', 'field': 'Round', 'width':80, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #80
         {'headerName': 'School', 'field': 'School', 'width':180, 'pinned':'left', 'filter': 'true'}, #auto
-        {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true'}, #70
+        {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #70
         
         {'headerName': 'MPI', 'field': 'MPI', 'width':90, 
          "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
@@ -224,6 +227,9 @@ if round is None:
     gridOptions['columnDefs'][2].pop('hide', None)
 if round is "Finals":
     gridOptions['columnDefs'][-1].pop('hide', None)
+
+if class_ is None:
+    gridOptions['columnDefs'][4].pop('hide', None)
     
 
 # st.markdown(
