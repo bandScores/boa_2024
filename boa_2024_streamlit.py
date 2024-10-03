@@ -56,7 +56,7 @@ cols = ['Date', 'Event', 'Round', 'School', 'Class',
 
 display = raw[cols]
 
-cos_new = ['Date', 'Event', 'Round', 'School', 'Class', 
+cols_new = ['Date', 'Event', 'Round', 'School', 'Class', 
         'MPI', 'MPI_Rank', 'MPE', 'MPE_Rank', 'Mus_Avg', 'Mus_Avg_Rank', 
         'VPI', 'VPI_Rank', 'VPE', 'VPE_Rank', 'Vis_Avg', 'Vis_Avg_Rank',
         'MGE1', 'MGE1_Rank', 'MGE2', 'MGE2_Rank', 'MGE_Tot', 'MGE_Tot_Rank',
