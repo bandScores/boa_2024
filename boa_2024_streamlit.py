@@ -26,10 +26,11 @@ markdown = """
         border-left: 2px solid #000000;  /* Change border for another class */
     }
 
-    ag-header-cell-text {
-        white-space: normal !important;  /* Force the header text to wrap */
-        overflow-wrap: break-word;  /* Handle word breaks for long words */
-        text-align: center;  /* Optional: Center-align header text */
+    .ag-header-cell-label .ag-header-cell-text {
+        white-space: normal !important;   /* Ensure text wrapping */
+        text-align: center;               /* Optional: center-align the header text */
+        word-wrap: break-word;            /* Break long words if necessary */
+        overflow-wrap: break-word;        /* Ensure word breaks occur properly */
     }
     
     /* General grid container styles */
