@@ -182,14 +182,14 @@ if freeze == 'No (recommended for mobile users)':
             gridOptions['columnDefs'][3] = {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'filter': 'true'}
             gridOptions['columnDefs'][4] = {'headerName': 'Class', 'field': 'Class', 'maxWidth':7, 'filter': 'true'}
 
-if round == 'Finals':
+while round == 'Finals':
     gridOptions['columnDefs'][-1]= {'headerName': 'Final Ranks','children': [
         {'headerName': 'Overall.','field': 'Place: Overall','width': 90,
          'headerClass': 'left-header', 'cellStyle': {'textAlign': 'center'},'type': 'numericColumn'}]}
-if event is not None:
+while event is not None:
     gridOptions['columnDefs'].remove({'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned': 'left', 'filter': 'true'})
     gridOptions['columnDefs'].remove({'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'})
-if round is not None:
+while round is not None:
     gridOptions['columnDefs'].remove({'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned': 'left', 'filter': 'true'})
 
 
