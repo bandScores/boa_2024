@@ -172,7 +172,7 @@ gridOptions = {
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Subtotal - nodeB.data.Subtotal; }"},
         
-        {'headerName': 'Penalty', 'field': 'Pen', 'width':70, 'valueFormatter': 'x.toFixed(1)', 'sortable':True},
+        {'headerName': 'Penalty', 'field': 'Pen', 'width':90, 'valueFormatter': 'x.toFixed(1)', 'sortable':True},
         
          {'headerName': 'Total', 'field': 'Total', 'width':90, 
          "valueGetter": "data.Total.toFixed(3) + '  (' + data.Place_Overall + ')'",  # Combine Score and Rank into one string
