@@ -169,9 +169,11 @@ gridOptions = {
 }
 
 if freeze != 'Yes':
-            for i in range(0, 5):
-                x = gridOptions['columnDefs'][i] 
-                x.pop('pinned', None)
+            gridOptions['columnDefs'][0].pop('pinned', None)
+            gridOptions['columnDefs'][1].pop('pinned', None)
+            gridOptions['columnDefs'][2].pop('pinned', None)
+            gridOptions['columnDefs'][3].pop('pinned', None)
+            gridOptions['columnDefs'][4].pop('pinned', None)
 
 
 # date_col = {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned': 'left', 'filter': 'true'}
