@@ -94,11 +94,11 @@ gridOptions = {
     'paginationPageSize': 100,
     'cellStyle': {'fontSize': '5px'},
     'columnDefs': [
-        {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'filter': 'true'},
-        {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'filter': 'true'},
-        {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'filter': 'true'},
-        {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'filter': 'true'},
-        {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'filter': 'true'},
+        {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned':'left', 'filter': 'true'},
+        {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned':'left', 'filter': 'true'},
+        {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned':'left', 'filter': 'true'},
+        {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned':'left', 'filter': 'true'},
+        {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned':'left', 'filter': 'true'},
         {'headerName': 'Music Individual', 'children':[
             {'headerName': 'Score','field': 'MPI', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
              'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
@@ -168,10 +168,11 @@ gridOptions = {
     ]
 }
 
-if freeze == 'Yes':
+if freeze != 'Yes':
             for i in range(0, 5):
                 x = gridOptions['columnDefs'][i] 
-                x['pinned'] = 'left'
+                x.pop('pinned', None)
+
 
 # date_col = {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned': 'left', 'filter': 'true'}
 # event_col = {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
