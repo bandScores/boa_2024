@@ -16,7 +16,7 @@ st.set_page_config(layout="wide")
 #         )
 
 # Responsive CSS for both desktop and mobile
-st.markdown(
+markdown = 
     """
     <style>
     
