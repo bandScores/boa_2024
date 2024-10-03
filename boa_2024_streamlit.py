@@ -174,7 +174,7 @@ if round == 'Finals':
          'headerClass': 'left-header', 'cellStyle': {'textAlign': 'center'},'type': 'numericColumn'}]}
 if event is not None:
     gridOptions['columnDefs'].remove({'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned': 'left', 'filter': 'true'})
-    gridOptions['columnDefs'].remove({'headerName': 'Event', 'field': 'Event', 'width': 170, 'pinned': 'left', 'filter': 'true'})
+    gridOptions['columnDefs'].remove({'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'})
 if round is not None:
     gridOptions['columnDefs'].remove({'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned': 'left', 'filter': 'true'})
 
