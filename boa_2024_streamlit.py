@@ -56,6 +56,16 @@ cols = ['Date', 'Event', 'Round', 'School', 'Class',
 
 display = data[cols]
 
+cos_new = ['Date', 'Event', 'Round', 'School', 'Class', 
+        'MPI', 'MPI_Rank', 'MPE', 'MPE_Rank', 'Mus_Avg', 'Mus_Avg_Rank', 
+        'VPI', 'VPI_Rank', 'VPE', 'VPE_Rank', 'Vis_Avg', 'Vis_Avg_Rank',
+        'MGE1', 'MGE1_Rank', 'MGE2', 'MGE2_Rank', 'MGE_Tot', 'MGE_Tot_Rank',
+        'VGE', 'VGE_Rank', 'GE_Tot', 'GE_Tot_Rank', 'Subtotal', #'Subtotal Rank',
+        'Pen', 'Total', 'Place:_Class', 'Place:_Overall']
+
+display.columns = cols_new
+data = display.to_dict()
+
 #event_select = st.multiselect('Event:', list(display['Event'].unique()))
 #display = display[display['Event'].isin(event_select)]
 
@@ -109,75 +119,75 @@ gridOptions = {
         {'headerName': 'School', 'field': 'School', 'width':100, 'pinned':'left', 'filter': 'true'}, #auto
         {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true'}, #70
         
-        {'headerName': 'MPI', 'field': 'MPI', 'width':70, 'valueGetter': {'function': 'return params.display["MPI"]' + ' - ' + 'params.display["MPI"];'},  # Custom display format
-            "comparator": {"function": "return paramsA.display['MPI'] - paramsB.display['MPI'];"}},
+        {'headerName': 'MPI', 'field': 'MPI', 'width':70, "valueGetter": {"function": "return params.data.MPI + ' - ' + params.data.MPI_Rank;"},  # Custom display format
+            "comparator": {"function": "return paramsA.data.MPI - paramsB.data.MPI;"}},
         
-        {'headerName': 'Music Individual', 'children':[
-            {'headerName': 'Score','field': 'MPI', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
-            {'headerName': '-', 'field': 'MPI Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn'}]},
-        {'headerName': 'Music Ensemble', 'children':[
-            {'headerName': 'Score','field': 'MPE', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
-            {'headerName': '-', 'field': 'MPE Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn'}]},
-        {'headerName': 'Music Average', 'children':[
-            {'headerName': 'Score','field': 'Mus Avg', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
-            {'headerName': '-', 'field': 'Mus Avg Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn'}]},
-        {'headerName': 'Visual Individual', 'children':[
-            {'headerName': 'Score','field': 'VPI', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
-            {'headerName': '-', 'field': 'VPI Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn'}]},
-        {'headerName': 'Visual Ensemble', 'children':[
-            {'headerName': 'Score','field': 'VPE', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
-            {'headerName': '-', 'field': 'VPE Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn'}]},
-        {'headerName': 'Visual Average', 'children':[
-            {'headerName': 'Score','field': 'Vis Avg', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
-            {'headerName': '-', 'field': 'Vis Avg Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn'}]},
-        {'headerName': 'Music GE 1', 'children':[
-            {'headerName': 'Score','field': 'MGE1', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
-            {'headerName': '-', 'field': 'MGE1 Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn'}]},
-        {'headerName': 'Music GE 2', 'children':[
-            {'headerName': 'Score','field': 'MGE2', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
-            {'headerName': '-', 'field': 'MGE2 Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn'}]},
-        {'headerName': 'Total Music GE', 'children':[
-            {'headerName': 'Score','field': 'MGE Tot', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
-            {'headerName': '-', 'field': 'MGE Tot Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn'}]},
-        {'headerName': 'Visual GE', 'children':[
-            {'headerName': 'Score','field': 'VGE', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
-            {'headerName': '-', 'field': 'VGE Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn'}]},
-        {'headerName': 'Total GE', 'children':[
-            {'headerName': 'Score','field': 'GE Tot', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
-            {'headerName': '-', 'field': 'GE Tot Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn'}]},
-        {'headerName': 'Sub','field': 'Subtotal', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'}, 
-        {'headerName': 'Pen','field': 'Pen', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn', 'valueFormatter': 'x.toFixed(1)'}, 
-        {'headerName': 'Total','field': 'Total', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
-        {'headerName': 'Ranks', 'children':[
-            {'headerName': 'Ovr.','field': 'Place: Overall', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn'},
-            {'headerName': 'Class', 'field': 'Place: Class', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-             'type': 'numericColumn'}]},
+        # {'headerName': 'Music Individual', 'children':[
+        #     {'headerName': 'Score','field': 'MPI', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
+        #     {'headerName': '-', 'field': 'MPI Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn'}]},
+        # {'headerName': 'Music Ensemble', 'children':[
+        #     {'headerName': 'Score','field': 'MPE', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
+        #     {'headerName': '-', 'field': 'MPE Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn'}]},
+        # {'headerName': 'Music Average', 'children':[
+        #     {'headerName': 'Score','field': 'Mus Avg', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
+        #     {'headerName': '-', 'field': 'Mus Avg Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn'}]},
+        # {'headerName': 'Visual Individual', 'children':[
+        #     {'headerName': 'Score','field': 'VPI', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
+        #     {'headerName': '-', 'field': 'VPI Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn'}]},
+        # {'headerName': 'Visual Ensemble', 'children':[
+        #     {'headerName': 'Score','field': 'VPE', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
+        #     {'headerName': '-', 'field': 'VPE Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn'}]},
+        # {'headerName': 'Visual Average', 'children':[
+        #     {'headerName': 'Score','field': 'Vis Avg', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
+        #     {'headerName': '-', 'field': 'Vis Avg Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn'}]},
+        # {'headerName': 'Music GE 1', 'children':[
+        #     {'headerName': 'Score','field': 'MGE1', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
+        #     {'headerName': '-', 'field': 'MGE1 Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn'}]},
+        # {'headerName': 'Music GE 2', 'children':[
+        #     {'headerName': 'Score','field': 'MGE2', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
+        #     {'headerName': '-', 'field': 'MGE2 Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn'}]},
+        # {'headerName': 'Total Music GE', 'children':[
+        #     {'headerName': 'Score','field': 'MGE Tot', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
+        #     {'headerName': '-', 'field': 'MGE Tot Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn'}]},
+        # {'headerName': 'Visual GE', 'children':[
+        #     {'headerName': 'Score','field': 'VGE', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
+        #     {'headerName': '-', 'field': 'VGE Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn'}]},
+        # {'headerName': 'Total GE', 'children':[
+        #     {'headerName': 'Score','field': 'GE Tot', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
+        #     {'headerName': '-', 'field': 'GE Tot Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn'}]},
+        # {'headerName': 'Sub','field': 'Subtotal', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'}, 
+        # {'headerName': 'Pen','field': 'Pen', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(1)'}, 
+        # {'headerName': 'Total','field': 'Total', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
+        # {'headerName': 'Ranks', 'children':[
+        #     {'headerName': 'Ovr.','field': 'Place: Overall', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn'},
+        #     {'headerName': 'Class', 'field': 'Place: Class', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
+        #      'type': 'numericColumn'}]},
     ]
 }
 
