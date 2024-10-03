@@ -114,16 +114,16 @@ gridOptions = {
     'cellStyle': {'fontSize': '5px'},
     'columnDefs': [
         {'headerName': 'Date', 'field': 'Date', 'width':85, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #85
-        {'headerName': 'Event', 'field': 'Event', 'width':120, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #auto
+        {'headerName': 'Event', 'field': 'Event', 'width':150, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #auto
         {'headerName': 'Round', 'field': 'Round', 'width':80, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #80
-        {'headerName': 'School', 'field': 'School', 'width':150, 'pinned':'left', 'filter': 'true'}, #auto
+        {'headerName': 'School', 'field': 'School', 'width':180, 'pinned':'left', 'filter': 'true'}, #auto
         {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true'}, #70
         
-        {'headerName': 'MPI', 'field': 'MPI', 'width':100, 
+        {'headerName': 'MPI', 'field': 'MPI', 'width':90, 
          "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
-        {'headerName': 'MPE', 'field': 'MPE', 'width':100, 
+        {'headerName': 'MPE', 'field': 'MPE', 'width':90, 
          "valueGetter": "data.MPE.toFixed(3) + '  (' + data.MPE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPE - nodeB.data.MPE; }"},     
