@@ -97,8 +97,8 @@ gridOptions = {
         {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned':'left', 'filter': 'true', 'hide':'true'},
         {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned':'left', 'filter': 'true', 'hide':'true'},
         {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned':'left', 'filter': 'true', 'hide':'true'},
-        {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned':'left', 'filter': 'true', 'hide':'true'},
-        {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned':'left', 'filter': 'true', 'hide':'true'},
+        {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned':'left', 'filter': 'true'},
+        {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned':'left', 'filter': 'true'},
         {'headerName': 'Music Individual', 'children':[
             {'headerName': 'Score','field': 'MPI', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
              'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
