@@ -40,9 +40,9 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-data = pd.read_csv('boa_2024.csv')
-data = data.rename(columns={'P/S/F': 'Round', 'School Full':'School'})
-data['Week'] = 'Week ' + data['Week Num'].astype('str')
+raw = pd.read_csv('boa_2024.csv')
+raw = data.rename(columns={'P/S/F': 'Round', 'School Full':'School'})
+raw['Week'] = 'Week ' + raw['Week Num'].astype('str')
 
 st.title("2024 BOA Scores App")
 st.write("This app shows recaps for Bands of America events from the 2024 season. Use the drop down selectors to filter by event or show round, or leave them empty to view all scores. Click on a column header to cycle through sorting options. When hovering over a column header, click the hamburger menu on the right to view more filtering options. \n")
@@ -54,7 +54,7 @@ cols = ['Date', 'Event', 'Round', 'School', 'Class',
         'VGE', 'VGE Rank', 'GE Tot', 'GE Tot Rank', 'Subtotal', #'Subtotal Rank',
         'Pen', 'Total', 'Place: Class', 'Place: Overall']
 
-display = data[cols]
+display = raw[cols]
 
 cos_new = ['Date', 'Event', 'Round', 'School', 'Class', 
         'MPI', 'MPI_Rank', 'MPE', 'MPE_Rank', 'Mus_Avg', 'Mus_Avg_Rank', 
@@ -63,7 +63,7 @@ cos_new = ['Date', 'Event', 'Round', 'School', 'Class',
         'VGE', 'VGE_Rank', 'GE_Tot', 'GE_Tot_Rank', 'Subtotal', #'Subtotal Rank',
         'Pen', 'Total', 'Place:_Class', 'Place:_Overall']
 
-display.columns = cols_new
+display = display.set_axis(cols_new, axis=1)
 data = display.to_dict()
 
 #event_select = st.multiselect('Event:', list(display['Event'].unique()))
