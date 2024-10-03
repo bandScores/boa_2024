@@ -26,8 +26,9 @@ markdown = """
         border-left: 2px solid #000000;  /* Change border for another class */
     }
 
-    .ag-header-cell-label {
-        white-space: normal !important;  /* Force text to wrap */
+    ag-header-cell-text {
+        white-space: normal !important;  /* Force the header text to wrap */
+        overflow-wrap: break-word;  /* Handle word breaks for long words */
         text-align: center;  /* Optional: Center-align header text */
     }
     
@@ -124,7 +125,7 @@ gridOptions = {
     #'domLayout': 'autoHeight',
     'pagination': True,
     'paginationPageSize': 100,
-    'headerHeight':150,
+    'headerHeight':60,
     'cellStyle': {'fontSize': '5px'},
     'columnDefs': [
         {'headerName': 'Date', 'field': 'Date', 'width':85, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #85
