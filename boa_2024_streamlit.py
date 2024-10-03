@@ -95,8 +95,6 @@ with row_input[0]:
     if event is not None:
         fitered_string1 = 'Event=="'+event+'"'
         display = display.query(fitered_string1)
-    #     display.drop('Date', axis=1, inplace=True)
-    #     display.drop('Event', axis=1, inplace=True)
         
 with row_input[1]:    
     round = st.selectbox('Select Show Round', list(display['Round'].unique()), placeholder='', index=None)
@@ -129,7 +127,7 @@ gridOptions = {
         {'headerName': 'School', 'field': 'School', 'width':180, 'pinned':'left', 'filter': 'true'}, #auto
         {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true', 'hide':'true', "cellStyle": {"border-right": "4px solid #FF0000"}}, #70
         
-        {'headerName': 'MPI', 'field': 'MPI', 'width':90, 
+        {'headerName': 'Music Perf.\nInd.', 'field': 'MPI', 'width':90, 'headerHeight':60,
          "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
