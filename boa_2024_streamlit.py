@@ -174,10 +174,10 @@ gridOptions = {
         
         {'headerName': 'Penalty', 'field': 'Pen', 'width':50, 'valueFormatter': 'x.toFixed(1)', 'sortable':True},
         
-         {'headerName': 'Total', 'field': 'Tot', 'width':90, 
-         "valueGetter": "data.Tot.toFixed(3) + '  (' + data.Tot_Rank + ')'",  # Combine Score and Rank into one string
+         {'headerName': 'Total', 'field': 'Total', 'width':90, 
+         "valueGetter": "data.Total.toFixed(3) + '  (' + data.Place:_Overall + ')'",  # Combine Score and Rank into one string
          "sortable": True,
-         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Tot - nodeB.data.Tot; }"},
+         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Total - nodeB.data.Total; }"},
 
         {'headerName': 'Class', 'field': 'Place:_Class', 'width':70, 'valueFormatter': 'x.toFixed(0)', 'sortable':True},
 
