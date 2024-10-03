@@ -168,29 +168,79 @@ gridOptions = {
     ]
 }
 
-if freeze == 'Yes':
-            gridOptions['columnDefs'][0] = {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned': 'left', 'filter': 'true'}
-            gridOptions['columnDefs'][1] = {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
-            gridOptions['columnDefs'][2] = {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned': 'left', 'filter': 'true'}
-            gridOptions['columnDefs'][3] = {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
-            gridOptions['columnDefs'][4] = {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned': 'left', 'filter': 'true'}
+date_col = {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned': 'left', 'filter': 'true'}
+event_col = {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
+round_col = {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned': 'left', 'filter': 'true'}
+school_col = {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
+class_col = {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned': 'left', 'filter': 'true'}
 
-if freeze == 'No (recommended for mobile users)':
-            gridOptions['columnDefs'][0] = {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'filter': 'true'}
-            gridOptions['columnDefs'][1] = {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'filter': 'true'}
-            gridOptions['columnDefs'][2] = {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'filter': 'true'}
-            gridOptions['columnDefs'][3] = {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'filter': 'true'}
-            gridOptions['columnDefs'][4] = {'headerName': 'Class', 'field': 'Class', 'maxWidth':7, 'filter': 'true'}
+cols1 = [date_col, event_col, round_col, school_col, class_col] #all cols
+cols2 = [round_col, school_col, class_col] #event selected round empty
+cols3 = [date_col, event_col, school_col, class_col] #round selected event empty
+cols4 = [school_col, class_col] #round and event selected
 
-while round == 'Finals':
-    gridOptions['columnDefs'][-1]= {'headerName': 'Final Ranks','children': [
-        {'headerName': 'Overall.','field': 'Place: Overall','width': 90,
-         'headerClass': 'left-header', 'cellStyle': {'textAlign': 'center'},'type': 'numericColumn'}]}
-while event is not None:
-    gridOptions['columnDefs'].remove({'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned': 'left', 'filter': 'true'})
-    gridOptions['columnDefs'].remove({'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'})
-while round is not None:
-    gridOptions['columnDefs'].remove({'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned': 'left', 'filter': 'true'})
+if event is None and round is None:
+    if freeze == 'Yes':
+        for i in range(len(cols1)):
+            cols1[i]['pinned'] = 'left']
+            gridOptions['columnDefs'].insert(i, cols1[i])
+    if freeze != 'Yes':
+        for i in range(len(cols1)):
+            gridOptions['columnDefs'].insert(i, cols1[i])
+
+if event is not None and round is None:
+    if freeze == 'Yes':
+        for i in range(len(cols2)):
+            cols2[i]['pinned'] = 'left']
+            gridOptions['columnDefs'].insert(i, cols2[i])
+    if freeze != 'Yes':
+        for i in range(len(cols2)):
+            gridOptions['columnDefs'].insert(i, cols2[i])
+
+if event is None and round is not None:
+    if freeze == 'Yes':
+        for i in range(len(cols3)):
+            cols3[i]['pinned'] = 'left']
+            gridOptions['columnDefs'].insert(i, cols3[i])
+    if freeze != 'Yes':
+        for i in range(len(cols3)):
+            gridOptions['columnDefs'].insert(i, cols3[i])
+
+if event is not None and round is not None:
+    if freeze == 'Yes':
+        for i in range(len(cols4)):
+            cols4[i]['pinned'] = 'left']
+            gridOptions['columnDefs'].insert(i, cols4[i])
+    if freeze != 'Yes':
+        for i in range(len(cols4)):
+            gridOptions['columnDefs'].insert(i, cols4[i])
+
+
+# if freeze == 'Yes':
+#             if event is None and round is None:
+                        
+#             gridOptions['columnDefs'][0] = {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned': 'left', 'filter': 'true'}
+#             gridOptions['columnDefs'][1] = {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
+#             gridOptions['columnDefs'][2] = {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned': 'left', 'filter': 'true'}
+#             gridOptions['columnDefs'][3] = {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
+#             gridOptions['columnDefs'][4] = {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned': 'left', 'filter': 'true'}
+
+# if freeze == 'No (recommended for mobile users)':
+#             gridOptions['columnDefs'][0] = {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'filter': 'true'}
+#             gridOptions['columnDefs'][1] = {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'filter': 'true'}
+#             gridOptions['columnDefs'][2] = {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'filter': 'true'}
+#             gridOptions['columnDefs'][3] = {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'filter': 'true'}
+#             gridOptions['columnDefs'][4] = {'headerName': 'Class', 'field': 'Class', 'maxWidth':7, 'filter': 'true'}
+
+# if round == 'Finals':
+#     gridOptions['columnDefs'][-1]= {'headerName': 'Final Ranks','children': [
+#         {'headerName': 'Overall.','field': 'Place: Overall','width': 90,
+#          'headerClass': 'left-header', 'cellStyle': {'textAlign': 'center'},'type': 'numericColumn'}]}
+# if event is not None:
+#     gridOptions['columnDefs'].remove({'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned': 'left', 'filter': 'true'})
+#     gridOptions['columnDefs'].remove({'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'})
+# if round is not None:
+#     gridOptions['columnDefs'].remove({'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned': 'left', 'filter': 'true'})
 
 
 
