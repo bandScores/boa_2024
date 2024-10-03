@@ -51,7 +51,7 @@ cols = ['Date', 'Event', 'Round', 'School', 'Class',
         'MPI', 'MPI Rank', 'MPE', 'MPE Rank', 'Mus Avg', 'Mus Avg Rank', 
         'VPI', 'VPI Rank', 'VPE', 'VPE Rank', 'Vis Avg', 'Vis Avg Rank',
         'MGE1', 'MGE1 Rank', 'MGE2', 'MGE2 Rank', 'MGE Tot', 'MGE Tot Rank',
-        'VGE', 'VGE Rank', 'GE Tot', 'GE Tot Rank', 'Subtotal', #'Subtotal Rank',
+        'VGE', 'VGE Rank', 'GE Tot', 'GE Tot Rank', 'Subtotal', 'Subtotal Rank',
         'Pen', 'Total', 'Place: Class', 'Place: Overall']
 
 display = raw[cols]
@@ -60,7 +60,7 @@ cols_new = ['Date', 'Event', 'Round', 'School', 'Class',
         'MPI', 'MPI_Rank', 'MPE', 'MPE_Rank', 'Mus_Avg', 'Mus_Avg_Rank', 
         'VPI', 'VPI_Rank', 'VPE', 'VPE_Rank', 'Vis_Avg', 'Vis_Avg_Rank',
         'MGE1', 'MGE1_Rank', 'MGE2', 'MGE2_Rank', 'MGE_Tot', 'MGE_Tot_Rank',
-        'VGE', 'VGE_Rank', 'GE_Tot', 'GE_Tot_Rank', 'Subtotal', #'Subtotal Rank',
+        'VGE', 'VGE_Rank', 'GE_Tot', 'GE_Tot_Rank', 'Subtotal', 'Subtotal_Rank',
         'Pen', 'Total', 'Place:_Class', 'Place:_Overall']
 
 display = display.set_axis(cols_new, axis=1)
@@ -165,7 +165,23 @@ gridOptions = {
         {'headerName': 'GE Total', 'field': 'GE_Tot', 'width':90, 
          "valueGetter": "data.GE_Tot.toFixed(3) + '  (' + data.GE_Tot_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
-         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.GE_Tot - nodeB.data.GE_Tot; }"}, 
+         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.GE_Tot - nodeB.data.GE_Tot; }"},
+
+        {'headerName': 'Subtotal', 'field': 'Subtotal', 'width':90, 
+         "valueGetter": "data.Subtotal.toFixed(3) + '  (' + data.Subtotal_Rank + ')'",  # Combine Score and Rank into one string
+         "sortable": True,
+         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Subtotal - nodeB.data.Subtotal; }"},
+        
+        {'headerName': 'Penalty', 'field': 'Pen', 'width':50, 'valueFormatter': 'x.toFixed(1)', 'sortable':True},
+        
+         {'headerName': 'Total', 'field': 'Tot', 'width':90, 
+         "valueGetter": "data.Tot.toFixed(3) + '  (' + data.Tot_Rank + ')'",  # Combine Score and Rank into one string
+         "sortable": True,
+         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Tot - nodeB.data.Tot; }"},
+
+        {'headerName': 'Class', 'field': 'Place:_Class', 'width':70, 'valueFormatter': 'x.toFixed(0)', 'sortable':True},
+
+        
         
          
         
