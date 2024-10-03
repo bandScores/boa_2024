@@ -98,7 +98,7 @@ gridOptions = {
         {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'},
         {'headerName': 'Round', 'field': 'Round', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'},
         {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'},
-        {'headerName': 'Class', 'field': 'Class', 'maxWidth':75, 'pinned': 'left', 'filter': 'true'},
+        {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned': 'left', 'filter': 'true'},
         {'headerName': 'Music Individual', 'children':[
             {'headerName': 'Score','field': 'MPI', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
              'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
@@ -183,14 +183,14 @@ if freeze == 'Yes':
             gridOptions['columnDefs'][1] = {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
             gridOptions['columnDefs'][2] = {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned': 'left', 'filter': 'true'}
             gridOptions['columnDefs'][3] = {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
-            gridOptions['columnDefs'][4] = {'headerName': 'Class', 'field': 'Class', 'maxWidth':75, 'pinned': 'left', 'filter': 'true'}
+            gridOptions['columnDefs'][4] = {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned': 'left', 'filter': 'true'}
 
 if freeze == 'No (recommended for mobile users)':
             gridOptions['columnDefs'][0] = {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'filter': 'true'}
             gridOptions['columnDefs'][1] = {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'filter': 'true'}
             gridOptions['columnDefs'][2] = {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'filter': 'true'}
             gridOptions['columnDefs'][3] = {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'filter': 'true'}
-            gridOptions['columnDefs'][4] = {'headerName': 'Class', 'field': 'Class', 'maxWidth':75, 'filter': 'true'}
+            gridOptions['columnDefs'][4] = {'headerName': 'Class', 'field': 'Class', 'maxWidth':7, 'filter': 'true'}
 
 
 # st.markdown(
