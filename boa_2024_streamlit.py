@@ -175,6 +175,13 @@ if freeze != 'Yes':
             gridOptions['columnDefs'][3].pop('pinned', None)
             gridOptions['columnDefs'][4].pop('pinned', None)
 
+if event is None: 
+            gridOptions['columnDefs'][0].pop('hide', None)
+            gridOptions['columnDefs'][1].pop('hide', None)
+
+if round is None:
+            gridOptions['columnDefs'][2].pop('hide', None)
+
 
 # date_col = {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned': 'left', 'filter': 'true'}
 # event_col = {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
