@@ -119,10 +119,13 @@ gridOptions = {
         {'headerName': 'School', 'field': 'School', 'width':100, 'pinned':'left', 'filter': 'true'}, #auto
         {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true'}, #70
         
-        {'headerName': 'MPI', 'field': 'MPI', 'width':70, "valueGetter": {"function": "return params.data.MPI + ' - ' + params.data.MPI_Rank;"},  # Custom display format
-            "comparator": {"function": "return paramsA.data.MPI;"}},
+        {'headerName': 'MPI', 'field': 'MPI', 'width':70, 
+         "valueGetter": "data.MPI + ' - ' + data.MPI_Rank",  # Combine Score and Rank into one string
+         "sortable": True,
+         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},        
         
-        # {'headerName': 'Music Individual', 'children':[
+         
+         # {'headerName': 'Music Individual', 'children':[
         #     {'headerName': 'Score','field': 'MPI', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
         #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
         #     {'headerName': '-', 'field': 'MPI Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
