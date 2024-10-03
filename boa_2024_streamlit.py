@@ -16,8 +16,7 @@ st.set_page_config(layout="wide")
 #         )
 
 # Responsive CSS for both desktop and mobile
-markdown = 
-    """
+markdown = """
     <style>
     
     .ag-theme-streamlit .custom-border-right .ag-cell {
