@@ -95,16 +95,16 @@ gridOptions = {
         'sortable': True,
         'filter': True,
         'resizable': True},
-    'domLayout': 'normal',
+    'domLayout': 'autoHeight',
     'pagination': True,
     'paginationPageSize': 100,
     'cellStyle': {'fontSize': '5px'},
     'columnDefs': [
-        {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned':'left', 'filter': 'true', 'hide':'true'},
-        {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned':'left', 'filter': 'true', 'hide':'true'},
-        {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned':'left', 'filter': 'true', 'hide':'true'},
-        {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned':'left', 'filter': 'true'},
-        {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned':'left', 'filter': 'true'},
+        {'headerName': 'Date', 'field': 'Date', 'flex':1, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #85
+        {'headerName': 'Event', 'field': 'Event', 'flex':1, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #auto
+        {'headerName': 'Round', 'field': 'Round', 'flex':1, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #80
+        {'headerName': 'School', 'field': 'School', 'flex':1, 'pinned':'left', 'filter': 'true'}, #auto
+        {'headerName': 'Class', 'field': 'Class', 'flex':1, 'pinned':'left', 'filter': 'true'}, #70
         {'headerName': 'Music Individual', 'children':[
             {'headerName': 'Score','field': 'MPI', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
              'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
