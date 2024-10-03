@@ -61,7 +61,7 @@ cols_new = ['Date', 'Event', 'Round', 'School', 'Class',
         'VPI', 'VPI_Rank', 'VPE', 'VPE_Rank', 'Vis_Avg', 'Vis_Avg_Rank',
         'MGE1', 'MGE1_Rank', 'MGE2', 'MGE2_Rank', 'MGE_Tot', 'MGE_Tot_Rank',
         'VGE', 'VGE_Rank', 'GE_Tot', 'GE_Tot_Rank', 'Subtotal', 'Subtotal_Rank',
-        'Pen', 'Total', 'Place:_Class', 'Place:_Overall']
+        'Pen', 'Total', 'Place_Class', 'Place_Overall']
 
 display = display.set_axis(cols_new, axis=1)
 data = display.to_dict()
@@ -175,11 +175,11 @@ gridOptions = {
         {'headerName': 'Penalty', 'field': 'Pen', 'width':70, 'valueFormatter': 'x.toFixed(1)', 'sortable':True},
         
          {'headerName': 'Total', 'field': 'Total', 'width':90, 
-         "valueGetter": "data.Total.toFixed(3) + '  (' + data.Place:_Overall + ')'",  # Combine Score and Rank into one string
+         "valueGetter": "data.Total.toFixed(3) + '  (' + data.Place_Overall + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Total - nodeB.data.Total; }"},
 
-        {'headerName': 'Class', 'field': 'Place:_Class', 'width':70, 'valueFormatter': 'x.toFixed(0)', 'sortable':True},
+        {'headerName': 'Class', 'field': 'Place_Class', 'width':70, 'valueFormatter': 'x.toFixed(0)', 'sortable':True},
 
         
         
