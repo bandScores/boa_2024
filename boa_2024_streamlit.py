@@ -25,6 +25,11 @@ markdown = """
     .ag-theme-streamlit .custom-border-left .ag-cell {
         border-left: 2px solid #000000;  /* Change border for another class */
     }
+
+    .ag-header-cell-label {
+        white-space: normal !important;  /* Force text to wrap */
+        text-align: center;  /* Optional: Center-align header text */
+    }
     
     /* General grid container styles */
     .ag-theme-streamlit {
