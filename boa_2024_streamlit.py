@@ -15,21 +15,24 @@ st.set_page_config(layout="wide")
 #             unsafe_allow_html=True
 #         )
 
+# Responsive CSS for both desktop and mobile
 st.markdown(
     """
     <style>
-    /* Full screen on desktop */
+    /* General grid container styles */
     .ag-theme-streamlit {
-        width: 100vw;  /* Make grid width 100% of the viewport width */
-        height: 80vh;  /* Adjust height based on available viewport height */
+        width: 100vw !important;
+        height: calc(100vh - 100px) !important;  /* Adjust based on viewport, with room for header/footer */
+        overflow-y: auto !important;
     }
 
-    /* Adjust for mobile screens */
+    /* Adjust for small screen sizes like mobile */
     @media only screen and (max-width: 600px) {
         .ag-theme-streamlit {
-            width: 100vw !important;  /* Full width for mobile */
-            height: 100vh !important;  /* Full height for mobile */
-            overflow-x: auto;  /* Allow horizontal scroll if content overflows */
+            width: 100vw !important;
+            height: calc(100vh - 100px) !important;  /* Adjust based on viewport */
+            overflow-x: scroll !important;  /* Allow horizontal scrolling */
+            font-size: 12px !important;  /* Smaller font size on mobile */
         }
     }
     </style>
@@ -202,7 +205,7 @@ if round is None:
 
 grid_table = AgGrid(display, 
                     gridOptions=gridOptions,
-                    fit_columns_on_grid_load=False,
+                    fit_columns_on_grid_load=True,
                     theme="streamlit",
                     enable_enterprise_modules=False,
                     fit_columns=True,
