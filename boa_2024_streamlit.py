@@ -120,7 +120,7 @@ gridOptions = {
         {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true'}, #70
         
         {'headerName': 'MPI', 'field': 'MPI', 'width':70, 
-         "valueGetter": "data.MPI + '\n' + data.MPI_Rank",  # Combine Score and Rank into one string
+         "valueGetter": "data.MPI.toFixed(3) + '(' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},        
         
