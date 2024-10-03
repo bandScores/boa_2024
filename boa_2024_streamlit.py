@@ -48,6 +48,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+st.markdown(markdown)
+
 raw = pd.read_csv('boa_2024.csv')
 raw = raw.rename(columns={'P/S/F': 'Round', 'School Full':'School'})
 raw['Week'] = 'Week ' + raw['Week Num'].astype('str')
