@@ -41,7 +41,7 @@ st.markdown(
 )
 
 raw = pd.read_csv('boa_2024.csv')
-raw = data.rename(columns={'P/S/F': 'Round', 'School Full':'School'})
+raw = raw.rename(columns={'P/S/F': 'Round', 'School Full':'School'})
 raw['Week'] = 'Week ' + raw['Week Num'].astype('str')
 
 st.title("2024 BOA Scores App")
