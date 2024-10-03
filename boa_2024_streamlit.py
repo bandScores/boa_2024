@@ -94,11 +94,11 @@ gridOptions = {
     'paginationPageSize': 100,
     'cellStyle': {'fontSize': '5px'},
     'columnDefs': [
-        # {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned': 'left', 'filter': 'true'},
-        # {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'},
-        # {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned': 'left', 'filter': 'true'},
-        # {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'},
-        # {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned': 'left', 'filter': 'true'},
+        {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'filter': 'true'},
+        {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'filter': 'true'},
+        {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'filter': 'true'},
+        {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'filter': 'true'},
+        {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'filter': 'true'},
         {'headerName': 'Music Individual', 'children':[
             {'headerName': 'Score','field': 'MPI', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
              'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
@@ -168,52 +168,57 @@ gridOptions = {
     ]
 }
 
-date_col = {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned': 'left', 'filter': 'true'}
-event_col = {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
-round_col = {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned': 'left', 'filter': 'true'}
-school_col = {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
-class_col = {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned': 'left', 'filter': 'true'}
+if freeze == 'Yes':
+            for i in range(0, 5):
+                x = gridOptions['columnDefs'][i] 
+                x['pinned'] = 'left'
 
-cols1 = [date_col, event_col, round_col, school_col, class_col] #all cols
-cols2 = [round_col, school_col, class_col] #event selected round empty
-cols3 = [date_col, event_col, school_col, class_col] #round selected event empty
-cols4 = [school_col, class_col] #round and event selected
+# date_col = {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned': 'left', 'filter': 'true'}
+# event_col = {'headerName': 'Event', 'field': 'Event', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
+# round_col = {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned': 'left', 'filter': 'true'}
+# school_col = {'headerName': 'School', 'field': 'School', 'autoWidth':'True', 'pinned': 'left', 'filter': 'true'}
+# class_col = {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned': 'left', 'filter': 'true'}
 
-if event is None and round is None:
-    if freeze == 'Yes':
-        for i in range(len(cols1)):
-            cols1[i]['pinned'] = 'left'
-            gridOptions['columnDefs'].insert(i, cols1[i])
-    if freeze != 'Yes':
-        for i in range(len(cols1)):
-            gridOptions['columnDefs'].insert(i, cols1[i])
+# cols1 = [date_col, event_col, round_col, school_col, class_col] #all cols
+# cols2 = [round_col, school_col, class_col] #event selected round empty
+# cols3 = [date_col, event_col, school_col, class_col] #round selected event empty
+# cols4 = [school_col, class_col] #round and event selected
 
-if event is not None and round is None:
-    if freeze == 'Yes':
-        for i in range(len(cols2)):
-            cols2[i]['pinned'] = 'left'
-            gridOptions['columnDefs'].insert(i, cols2[i])
-    if freeze != 'Yes':
-        for i in range(len(cols2)):
-            gridOptions['columnDefs'].insert(i, cols2[i])
+# if event is None and round is None:
+#     if freeze == 'Yes':
+#         for i in range(len(cols1)):
+#             cols1[i]['pinned'] = 'left'
+#             gridOptions['columnDefs'].insert(i, cols1[i])
+#     if freeze != 'Yes':
+#         for i in range(len(cols1)):
+#             gridOptions['columnDefs'].insert(i, cols1[i])
 
-if event is None and round is not None:
-    if freeze == 'Yes':
-        for i in range(len(cols3)):
-            cols3[i]['pinned'] = 'left'
-            gridOptions['columnDefs'].insert(i, cols3[i])
-    if freeze != 'Yes':
-        for i in range(len(cols3)):
-            gridOptions['columnDefs'].insert(i, cols3[i])
+# if event is not None and round is None:
+#     if freeze == 'Yes':
+#         for i in range(len(cols2)):
+#             cols2[i]['pinned'] = 'left'
+#             gridOptions['columnDefs'].insert(i, cols2[i])
+#     if freeze != 'Yes':
+#         for i in range(len(cols2)):
+#             gridOptions['columnDefs'].insert(i, cols2[i])
 
-if event is not None and round is not None:
-    if freeze == 'Yes':
-        for i in range(len(cols4)):
-            cols4[i]['pinned'] = 'left'
-            gridOptions['columnDefs'].insert(i, cols4[i])
-    if freeze != 'Yes':
-        for i in range(len(cols4)):
-            gridOptions['columnDefs'].insert(i, cols4[i])
+# if event is None and round is not None:
+#     if freeze == 'Yes':
+#         for i in range(len(cols3)):
+#             cols3[i]['pinned'] = 'left'
+#             gridOptions['columnDefs'].insert(i, cols3[i])
+#     if freeze != 'Yes':
+#         for i in range(len(cols3)):
+#             gridOptions['columnDefs'].insert(i, cols3[i])
+
+# if event is not None and round is not None:
+#     if freeze == 'Yes':
+#         for i in range(len(cols4)):
+#             cols4[i]['pinned'] = 'left'
+#             gridOptions['columnDefs'].insert(i, cols4[i])
+#     if freeze != 'Yes':
+#         for i in range(len(cols4)):
+#             gridOptions['columnDefs'].insert(i, cols4[i])
 
 
 # if freeze == 'Yes':
