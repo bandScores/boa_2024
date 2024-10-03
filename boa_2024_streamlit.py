@@ -100,7 +100,7 @@ with row_input[1]:
 with row_input[2]:    
     class_ = st.selectbox('Select Class', ['AAAA', 'AAA', 'AA', 'A'], placeholder='', index=None)
     if class_ is not None:
-        fitered_string3 = 'Round=="'+class_+'"'
+        fitered_string3 = 'Class=="'+class_+'"'
         display = display.query(fitered_string3)
 
 #with row_input[2]:
