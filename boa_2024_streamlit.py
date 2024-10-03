@@ -44,11 +44,9 @@ markdown =
         }
     }
     </style>
-    """,
-    unsafe_allow_html=True
-)
+    """
 
-st.markdown(markdown)
+st.markdown(markdown, unsafe_allow_html=True)
 
 raw = pd.read_csv('boa_2024.csv')
 raw = raw.rename(columns={'P/S/F': 'Round', 'School Full':'School'})
