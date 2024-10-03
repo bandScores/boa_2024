@@ -205,11 +205,11 @@ if round is None:
 
 grid_table = AgGrid(display, 
                     gridOptions=gridOptions,
-                    fit_columns_on_grid_load=True,
+                    fit_columns_on_grid_load=False,
                     theme="streamlit",
                     enable_enterprise_modules=False,
-                    fit_columns=True,
-                    use_container_width=True,
+                    fit_columns=False,
+                    use_container_width=False,
                     height=600
                     #style={'width': '100%', 'height': '500px'}
                    )
