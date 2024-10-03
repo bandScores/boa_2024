@@ -120,7 +120,7 @@ gridOptions = {
         {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true'}, #70
         
         {'headerName': 'MPI', 'field': 'MPI', 'width':70, "valueGetter": {"function": "return params.data.MPI + ' - ' + params.data.MPI_Rank;"},  # Custom display format
-            "comparator": {"function": "return paramsA.data.MPI - paramsB.data.MPI;"}},
+            "comparator": {"function": "return paramsA.data.MPI;"}},
         
         # {'headerName': 'Music Individual', 'children':[
         #     {'headerName': 'Score','field': 'MPI', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
