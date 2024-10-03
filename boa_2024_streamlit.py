@@ -18,14 +18,19 @@ st.set_page_config(layout="wide")
 st.markdown(
     """
     <style>
-    .fullScreenGrid {
-        width: 100vw !important;
-        height: 100vh !important;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 9999;
-        background-color: white;
+    /* Full screen on desktop */
+    .ag-theme-streamlit {
+        width: 100vw;  /* Make grid width 100% of the viewport width */
+        height: 80vh;  /* Adjust height based on available viewport height */
+    }
+
+    /* Adjust for mobile screens */
+    @media only screen and (max-width: 600px) {
+        .ag-theme-streamlit {
+            width: 100vw !important;  /* Full width for mobile */
+            height: 100vh !important;  /* Full height for mobile */
+            overflow-x: auto;  /* Allow horizontal scroll if content overflows */
+        }
     }
     </style>
     """,
