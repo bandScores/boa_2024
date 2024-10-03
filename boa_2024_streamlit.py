@@ -229,6 +229,7 @@ grid_table = AgGrid(display,
                     fit_columns_on_grid_load=False,
                     theme="streamlit",
                     enable_enterprise_modules=False,
+                    enable_pagination=True,
                     fit_columns=False,
                     use_container_width=False,
                     height=600
