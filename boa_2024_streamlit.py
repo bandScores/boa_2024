@@ -182,7 +182,7 @@ cols4 = [school_col, class_col] #round and event selected
 if event is None and round is None:
     if freeze == 'Yes':
         for i in range(len(cols1)):
-            cols1[i]['pinned'] = 'left']
+            cols1[i]['pinned'] = 'left'
             gridOptions['columnDefs'].insert(i, cols1[i])
     if freeze != 'Yes':
         for i in range(len(cols1)):
@@ -191,7 +191,7 @@ if event is None and round is None:
 if event is not None and round is None:
     if freeze == 'Yes':
         for i in range(len(cols2)):
-            cols2[i]['pinned'] = 'left']
+            cols2[i]['pinned'] = 'left'
             gridOptions['columnDefs'].insert(i, cols2[i])
     if freeze != 'Yes':
         for i in range(len(cols2)):
@@ -200,7 +200,7 @@ if event is not None and round is None:
 if event is None and round is not None:
     if freeze == 'Yes':
         for i in range(len(cols3)):
-            cols3[i]['pinned'] = 'left']
+            cols3[i]['pinned'] = 'left'
             gridOptions['columnDefs'].insert(i, cols3[i])
     if freeze != 'Yes':
         for i in range(len(cols3)):
@@ -209,7 +209,7 @@ if event is None and round is not None:
 if event is not None and round is not None:
     if freeze == 'Yes':
         for i in range(len(cols4)):
-            cols4[i]['pinned'] = 'left']
+            cols4[i]['pinned'] = 'left'
             gridOptions['columnDefs'].insert(i, cols4[i])
     if freeze != 'Yes':
         for i in range(len(cols4)):
