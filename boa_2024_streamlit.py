@@ -4,16 +4,33 @@ from st_aggrid import AgGrid, GridOptionsBuilder
 #from src.agstyler import PINLEFT, PRECISION_TWO, draw_grid
 
 st.set_page_config(layout="wide")
+# st.markdown(
+#             """
+#             <style>
+#             [data-testid="stElementToolbar"] {
+#                 display: none;
+#             }
+#             </style>
+#             """,
+#             unsafe_allow_html=True
+#         )
+
 st.markdown(
-            """
-            <style>
-            [data-testid="stElementToolbar"] {
-                display: none;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
+    """
+    <style>
+    .fullScreenGrid {
+        width: 100vw !important;
+        height: 100vh !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        background-color: white;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 data = pd.read_csv('boa_2024.csv')
 data = data.rename(columns={'P/S/F': 'Round', 'School Full':'School'})
