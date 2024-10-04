@@ -261,7 +261,7 @@ markdown = """
 
 custom_css = {
         #'.ag-header-cell': {'text-align': 'center !important;'},
-        '.ag-header-cell-label': {'text-align': 'center !important;', 'font-size': '14px !important;'}
+        '.ag-header-cell-label': {'justify-content': 'center !important;', 'font-size': '14px !important;'}
 }
 
 
