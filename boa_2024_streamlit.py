@@ -26,10 +26,9 @@ markdown = """
         border-left: 2px solid #000000;  /* Change border for another class */
     }
 
-    .ag-header-cell-label {
-    white-space: normal !important;
-    word-wrap: break-word;
-    text-align: center;  /* Optional: to center the header text */
+    custom-header .ag-header-cell-label {
+    font-size: 16px !important;  /* Adjust the font size as needed */
+    font-weight: bold;  /* Optional: to make the text bold */
     }
 
     .ag-theme-streamlit .custom-header-group .ag-header-group-cell-label {
@@ -212,7 +211,8 @@ gridOptions = {
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Total - nodeB.data.Total; }"},
 
-        {'headerName': 'Place: Class', 'field': 'Place_Class', 'maxWidth':80, 'valueFormatter': 'x.toFixed(0)', 'wrapHeaderText':True, 'sortable':True, 'hide':'true'},
+        {'headerName': 'Place: Class', 'field': 'Place_Class', 'maxWidth':80, 'valueFormatter': 'x.toFixed(0)', 'wrapHeaderText':True, 'headerClass':'custom-header', 
+         'sortable':True, 'hide':'true'},
 
          
         
