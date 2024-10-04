@@ -19,27 +19,27 @@ st.set_page_config(layout="wide")
 markdown = """
     <style>
     
-    .ag-theme-alpine .custom-border-right .ag-cell {
+    .ag-theme-streamlit .custom-border-right .ag-cell {
         border-right: 2px solid #000000;  /* Change border for custom class */
     }
-    .ag-theme-alpine .custom-border-left .ag-cell {
+    .ag-theme-streamlit .custom-border-left .ag-cell {
         border-left: 2px solid #000000;  /* Change border for another class */
     }
 
-    .ag-theme-alpine .custom-header-group .ag-header-group-cell-label {
+    .ag-theme-streamlit .custom-header-group .ag-header-group-cell-label {
     justify-content: center;
     text-align: center;
     font-weight: bold;
     }
     
-    .ag-theme-alpine .custom-header-group .ag-header-group-cell-label {
+    .ag-theme-streamlit .custom-header-group .ag-header-group-cell-label {
     justify-content: center;
     text-align: center;
     font-weight: bold;
     }
     
     /* General grid container styles */
-    .ag-theme-alpine {
+    .ag-theme-streamlit {
         width: 100vw !important;
         height: calc(100vh - 100px) !important;  /* Adjust based on viewport, with room for header/footer */
         overflow-y: auto !important;
@@ -267,7 +267,7 @@ if class_ is None:
 grid_table = AgGrid(display, 
                     gridOptions=gridOptions,
                     fit_columns_on_grid_load=False,
-                    theme="alpine",
+                    theme="streamlit",
                     enable_enterprise_modules=False,
                     enable_pagination=True,
                     fit_columns=False,
