@@ -19,34 +19,34 @@ st.set_page_config(layout="wide")
 markdown = """
     <style>
     
-    .ag-theme-streamlit .custom-border-right .ag-cell {
+    .ag-theme-alpine .custom-border-right .ag-cell {
         border-right: 2px solid #000000;  /* Change border for custom class */
     }
-    .ag-theme-streamlit .custom-border-left .ag-cell {
+    .ag-theme-alpine .custom-border-left .ag-cell {
         border-left: 2px solid #000000;  /* Change border for another class */
     }
 
-    .ag-theme-streamlit .cellCenter .ag-cell-wrapper {
+    .ag-theme-alpine .custom-header-group .ag-header-group-cell-label {
     justify-content: center;
     text-align: center;
     font-weight: bold;
     }
     
-    .ag-theme-streamlit .custom-header-group .ag-header-group-cell-label {
+    .ag-theme-alpine .custom-header-group .ag-header-group-cell-label {
     justify-content: center;
     text-align: center;
     font-weight: bold;
     }
     
     /* General grid container styles */
-    .ag-theme-streamlit {
+    .ag-theme-alpine {
         width: 100vw !important;
         height: calc(100vh - 100px) !important;  /* Adjust based on viewport, with room for header/footer */
         overflow-y: auto !important;
     }
 
     /* Adjust for small screen sizes like mobile */
-    @media only screen and (max-width: 600px) {
+    @media only alpine and (max-width: 600px) {
         .ag-theme-streamlit {
             width: 100vw !important;
             height: calc(100vh - 100px) !important;  /* Adjust based on viewport */
@@ -151,7 +151,7 @@ gridOptions = {
         {'headerName': 'Avg.', 'field': 'Mus_Avg', 'width':90, "cellStyle": {"border-right": "4px solid #FF0000"}, 
          'headerTextAlign':'center', "valueGetter": "data.Mus_Avg.toFixed(3) + '  (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
-         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"}], 'cellClass':'cellCenter'},
+         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"}], 'headerGroupClass':'custom-header-group'},
         
         {'headerName': 'Visual', 'children': [
         {'headerName': 'Individual', 'field': 'VPI', 'width':90, 
@@ -165,7 +165,7 @@ gridOptions = {
         {'headerName': 'Average', 'field': 'Vis_Avg', 'width':90, "cellStyle": {"border-right": "4px solid #FF0000"},
          "valueGetter": "data.Vis_Avg.toFixed(3) + '  (' + data.Vis_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
-         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Vis_Avg - nodeB.data.Vis_Avg; }"}], 'cellClass':'cellCenter'},
+         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Vis_Avg - nodeB.data.Vis_Avg; }"}], 'headerGroupClass':'custom-header-group'},
 
         {'headerName': 'Music GE1', 'field': 'MGE1', 'width':90, "cellStyle": {"text-align": "center"},
          "valueGetter": "data.MGE1.toFixed(3) + '  (' + data.MGE1_Rank + ')'",  # Combine Score and Rank into one string
@@ -267,7 +267,7 @@ if class_ is None:
 grid_table = AgGrid(display, 
                     gridOptions=gridOptions,
                     fit_columns_on_grid_load=False,
-                    theme="streamlit",
+                    theme="alpine",
                     enable_enterprise_modules=False,
                     enable_pagination=True,
                     fit_columns=False,
