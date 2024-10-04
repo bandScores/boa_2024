@@ -267,7 +267,7 @@ custom_css = {
         '.ag-cell': {'border-right': '2px solid #000000;'}, 
         '.ag-theme-streamlit': {'width': '100vw !important;', 'height: calc(100vh - 100px) !important;', 'overflow-y': 'auto !important;'}
     }
-}
+
 
 
     #     .header-center .ag-header-cell {
