@@ -144,7 +144,7 @@ gridOptions = {
         {'headerName': 'Music Average', 'field': 'Mus_Avg', 'width':90, "cellStyle": {"textAlign": "center", "border-right": "4px solid #FF0000"}, 'headerClass': 'center-aligned-group-header', 
          'headerTextAlign':'center', "valueGetter": "data.Mus_Avg.toFixed(3) + '  (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
-         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"}],
+         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"}]},
         
         {'headerName': 'Visual Ind.', 'field': 'VPI', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center"},
          "valueGetter": "data.VPI.toFixed(3) + '  (' + data.VPI_Rank + ')'",  # Combine Score and Rank into one string
