@@ -132,11 +132,11 @@ gridOptions = {
         {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true', 'hide':'true', "cellStyle": {"border-right": "4px solid #FF0000"}}, #70
 
         {'headerName': 'Music', 'children': [
-        {'headerName': 'Ind.', 'field': 'MPI', 'width':90, "cellStyle": {"textAlign": "center"}, 'headerClass': 'center-aligned-group-header',
+        {'headerName': 'Individual', 'field': 'MPI', 'width':90, "cellStyle": {"textAlign": "center"}, 'headerClass': 'center-aligned-group-header',
          "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
-        {'headerName': 'Ens.', 'field': 'MPE', 'width':90, "cellStyle": {"textAlign": "center"}, 'headerClass': 'center-aligned-group-header',
+        {'headerName': 'Ensemble', 'field': 'MPE', 'width':90, "cellStyle": {"textAlign": "center"}, 'headerClass': 'center-aligned-group-header',
          "valueGetter": "data.MPE.toFixed(3) + '  (' + data.MPE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPE - nodeB.data.MPE; }"},     
@@ -146,15 +146,15 @@ gridOptions = {
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"}]},
         
         {'headerName': 'Visual', 'children': [
-        {'headerName': 'Visual Ind.', 'field': 'VPI', 'width':90, "cellStyle": {"text-align": "center"},
+        {'headerName': 'Individual', 'field': 'VPI', 'width':90, "cellStyle": {"text-align": "center"},
          "valueGetter": "data.VPI.toFixed(3) + '  (' + data.VPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VPI - nodeB.data.VPI; }"},
-        {'headerName': 'Visual Ens.', 'field': 'VPE', 'width':90, "cellStyle": {"text-align": "center"},
+        {'headerName': 'Ensemble', 'field': 'VPE', 'width':90, "cellStyle": {"text-align": "center"},
          "valueGetter": "data.VPE.toFixed(3) + '  (' + data.VPE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VPE - nodeB.data.VPE; }"},     
-        {'headerName': 'Visual Average', 'field': 'Vis_Avg', 'width':90, "cellStyle": {"text-align": "center", "border-right": "4px solid #FF0000"},
+        {'headerName': 'Average', 'field': 'Vis_Avg', 'width':90, "cellStyle": {"text-align": "center", "border-right": "4px solid #FF0000"},
          "valueGetter": "data.Vis_Avg.toFixed(3) + '  (' + data.Vis_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Vis_Avg - nodeB.data.Vis_Avg; }"}]},
