@@ -147,7 +147,7 @@ gridOptions = {
          "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
-        {'headerName': 'Music Ens.', 'field': 'MPE', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center"}, "headerClass": "custom-header"
+        {'headerName': 'Music Ens.', 'field': 'MPE', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center"}, "headerClass": "custom-header",
          "valueGetter": "data.MPE.toFixed(3) + '  (' + data.MPE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPE - nodeB.data.MPE; }"},     
