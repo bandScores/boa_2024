@@ -150,7 +150,7 @@ gridOptions = {
         {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned':'left', 'filter': 'true', 'hide':'true', "cellStyle": {"border-right": "4px solid #FF0000"}}, #70
 
         {'headerName': 'Music', 'children': [
-        {'headerName': 'Ind.', 'field': 'MPI', 'maxWidth':90,
+        {'headerName': 'Ind.', 'field': 'MPI', 'maxWidth':90, 'headerStyle': {'text-align': 'center'},
          "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
