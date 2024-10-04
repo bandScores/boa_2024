@@ -47,22 +47,6 @@ markdown = """
         font-size: 12px;
     }
     
-    /* General grid container styles */
-    .ag-theme-streamlit {
-        width: 100vw !important;
-        height: calc(100vh - 100px) !important;
-        overflow-y: auto !important;
-    }
-    
-    /* Adjust for small screen sizes like mobile */
-    @media only screen and (max-width: 600px) {
-        .ag-theme-streamlit {
-            width: 100vw !important;
-            height: calc(100vh - 100px) !important;
-            overflow-x: scroll !important;
-            font-size: 12px !important;
-        }
-    }
     </style>
     """
 
