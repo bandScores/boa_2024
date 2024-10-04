@@ -90,9 +90,9 @@ gridOptions = {
     'cellStyle': {'fontSize': '5px'},
     'columnDefs': [
         {'headerName': 'Date', 'children':
-                ['headerName':'d', 'field': 'Date', 'maxWidth':85, 'pinned':'left', 'filter': 'true', 'hide':'true'}], #85
-        {'headerName': 'Event', 'field': 'Event', 'width':170, 'pinned':'left', 'filter': 'true', 'hide':'true', 'children': []}, #auto
-        {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned':'left', 'filter': 'true', 'hide':'true', 'children': []}, #80
+                [{'headerName':'', 'field': 'Date', 'maxWidth':85, 'pinned':'left', 'filter': 'true', 'hide':'true'}]}, #85
+        {'headerName': 'Event', 'field': 'Event', 'width':170, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #auto
+        {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #80
         {'headerName': 'School', 'field': 'School', 'width':190, 'pinned':'left', 'filter': 'true'}, #auto
         {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned':'left', 'filter': 'true', 'hide':'true', "cellStyle": {"border-right": "4px solid #FF0000"}}, #70
 
