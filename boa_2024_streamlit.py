@@ -89,7 +89,8 @@ gridOptions = {
     'paginationPageSize': 100,
     'cellStyle': {'fontSize': '5px'},
     'columnDefs': [
-        {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned':'left', 'filter': 'true', 'hide':'true', 'children': []}, #85
+        {'headerName': 'Date', 'children':
+                ['headerName':'d', 'field': 'Date', 'maxWidth':85, 'pinned':'left', 'filter': 'true', 'hide':'true'}], #85
         {'headerName': 'Event', 'field': 'Event', 'width':170, 'pinned':'left', 'filter': 'true', 'hide':'true', 'children': []}, #auto
         {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned':'left', 'filter': 'true', 'hide':'true', 'children': []}, #80
         {'headerName': 'School', 'field': 'School', 'width':190, 'pinned':'left', 'filter': 'true'}, #auto
