@@ -26,10 +26,8 @@ markdown = """
         border-left: 2px solid #000000;  /* Change border for another class */
     }
 
-    .ag-header-group-cell-label {
-    display: flex;
+    ag-theme-streamlit .cellCenter .ag-cell-wrapper {
     justify-content: center;
-    align-items: center;
     }
     
     /* General grid container styles */
@@ -133,21 +131,21 @@ gridOptions = {
         {'headerName': 'School', 'field': 'School', 'width':180, 'pinned':'left', 'filter': 'true'}, #auto
         {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true', 'hide':'true', "cellStyle": {"border-right": "4px solid #FF0000"}}, #70
 
-        {'headerName': 'Music', 'type': 'centerAligned', 'children': [
-        {'headerName': 'Ind.', 'field': 'MPI', 'width':90, 'type': 'centerAligned',
+        {'headerName': 'Music', 'cellClass': 'cellCenter', 'children': [
+        {'headerName': 'Ind.', 'field': 'MPI', 'width':90,
          "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
-        {'headerName': 'Ens.', 'field': 'MPE', 'width':90, 'type': 'centerAligned',
+        {'headerName': 'Ens.', 'field': 'MPE', 'width':90, 
          "valueGetter": "data.MPE.toFixed(3) + '  (' + data.MPE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPE - nodeB.data.MPE; }"},     
-        {'headerName': 'Avg.', 'field': 'Mus_Avg', 'width':90, 'type': 'centerAligned', "cellStyle": {"border-right": "4px solid #FF0000"}, 
+        {'headerName': 'Avg.', 'field': 'Mus_Avg', 'width':90, "cellStyle": {"border-right": "4px solid #FF0000"}, 
          'headerTextAlign':'center', "valueGetter": "data.Mus_Avg.toFixed(3) + '  (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"}], 'headerClass':'center-header-group'},
         
-        {'headerName': 'Visual', 'textAlign':'center', 'children': [
+        {'headerName': 'Visual', 'cellClass': 'cellCenter', 'children': [
         {'headerName': 'Individual', 'field': 'VPI', 'width':90, 
          "valueGetter": "data.VPI.toFixed(3) + '  (' + data.VPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
