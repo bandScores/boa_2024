@@ -135,7 +135,7 @@ gridOptions = {
         {'headerName': 'School', 'field': 'School', 'width':180, 'pinned':'left', 'filter': 'true'}, #auto
         {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true', 'hide':'true', "cellStyle": {"border-right": "4px solid #FF0000"}}, #70
         
-        {'headerName': 'Music Ind..', 'field': 'MPI', 'width':90, 'wrapHeaderText': 'true',
+        {'headerName': 'Music Ind.', 'field': 'MPI', 'width':90, 'wrapHeaderText': 'true',
          "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
@@ -161,41 +161,41 @@ gridOptions = {
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Vis_Avg - nodeB.data.Vis_Avg; }"},
 
-        {'headerName': 'MGE1', 'field': 'MGE1', 'width':90, 
+        {'headerName': 'Music GE1', 'field': 'MGE1', 'width':90, 'wrapHeaderText': 'true',
          "valueGetter": "data.MGE1.toFixed(3) + '  (' + data.MGE1_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MGE1 - nodeB.data.MGE1; }"},
-        {'headerName': 'MGE2', 'field': 'MGE2', 'width':90, 
+        {'headerName': 'Music GE2', 'field': 'MGE2', 'width':90, 'wrapHeaderText': 'true',
          "valueGetter": "data.MGE2.toFixed(3) + '  (' + data.MGE2_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VPE - nodeB.data.VPE; }"},     
-        {'headerName': 'MGE Total', 'field': 'MGE_Tot', 'width':100, "cellStyle": {"border-right": "4px solid #FF0000"},
+        {'headerName': 'Music GE Total', 'field': 'MGE_Tot', 'width':100, 'wrapHeaderText': 'true', "cellStyle": {"border-right": "4px solid #FF0000"},
          "valueGetter": "data.MGE_Tot.toFixed(3) + '  (' + data.MGE_Tot_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MGE_Tot - nodeB.data.MGE_Tot; }"},
 
-        {'headerName': 'VGE', 'field': 'VGE', 'width':90, 
+        {'headerName': 'Visual GE', 'field': 'VGE', 'width':90, 'wrapHeaderText': 'true',
          "valueGetter": "data.VGE.toFixed(3) + '  (' + data.VGE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VGE - nodeB.data.VGE; }"},
-        {'headerName': 'GE Total', 'field': 'GE_Tot', 'width':90, "cellStyle": {"border-right": "4px solid #FF0000"},
+        {'headerName': 'GE Total', 'field': 'GE_Tot', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"border-right": "4px solid #FF0000"},
          "valueGetter": "data.GE_Tot.toFixed(3) + '  (' + data.GE_Tot_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.GE_Tot - nodeB.data.GE_Tot; }"},
 
-        {'headerName': 'Subtotal', 'field': 'Subtotal', 'width':90, 
+        {'headerName': 'Subtotal', 'field': 'Subtotal', 'width':90, 'wrapHeaderText': 'true',
          "valueGetter": "data.Subtotal.toFixed(3) + '  (' + data.Subtotal_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Subtotal - nodeB.data.Subtotal; }"},
         
-        {'headerName': 'Penalty', 'field': 'Pen', 'width':90, 'valueFormatter': 'x.toFixed(1)', 'sortable':True},
+        {'headerName': 'Pen.', 'field': 'Pen', 'width':90, 'wrapHeaderText': 'true', 'valueFormatter': 'x.toFixed(1)', 'sortable':True},
         
-         {'headerName': 'Total', 'field': 'Total', 'width':90, "cellClass": "custom-border-right",
+         {'headerName': 'Total', 'field': 'Total', 'width':90, 'wrapHeaderText': 'true', "cellClass": "custom-border-right",
          "valueGetter": "data.Total.toFixed(3) + '  (' + data.Place_Overall + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Total - nodeB.data.Total; }"},
 
-        {'headerName': 'Class', 'field': 'Place_Class', 'width':70, 'valueFormatter': 'x.toFixed(0)', 'sortable':True, 'hide':'true'},
+        {'headerName': 'Place: Class', 'field': 'Place_Class', 'width':70, 'valueFormatter': 'x.toFixed(0)', 'wrapHeaderText': 'true', 'sortable':True, 'hide':'true'},
 
         
         
