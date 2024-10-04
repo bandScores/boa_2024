@@ -15,49 +15,6 @@ st.set_page_config(layout="wide")
 #             unsafe_allow_html=True
 #         )
 
-# Responsive CSS for both desktop and mobile
-markdown = """
-    <style>
-    body {
-    background-color: yellow;
-    }
-    
-    /* Custom borders for cells */
-    .custom-border-right .ag-cell {
-        border-right: 2px solid #000000;
-    }
-    
-    .custom-border-left .ag-cell {
-        border-left: 2px solid #000000;
-    }
-    
-    /* Center-align header */
-    .header-center .ag-header-cell {
-        text-align: center !important;
-    }
-    
-    /* Left-align header */
-    .header-left .ag-header-cell {
-        text-align: left !important;
-    }
-    
-    /* Font size customization */
-    .header-large .ag-header-cell {
-        font-size: 18px !important;
-    }
-    
-    .header-small .ag-header-cell {
-        font-size: 12px !important;
-    }
-
-    .header-center .ag-header-cell {
-    background-color: red !important;
-    }
-    </style>
-    """
-
-st.markdown(markdown, unsafe_allow_html=True)
-
 raw = pd.read_csv('boa_2024.csv')
 raw = raw.rename(columns={'P/S/F': 'Round', 'School Full':'School'})
 raw['Week'] = 'Week ' + raw['Week Num'].astype('str')
@@ -260,6 +217,49 @@ if class_ is None:
 #     """,
 #     unsafe_allow_html=True
 # )
+
+# Responsive CSS for both desktop and mobile
+markdown = """
+    <style>
+    body {
+    background-color: yellow;
+    }
+    
+    /* Custom borders for cells */
+    .custom-border-right .ag-cell {
+        border-right: 2px solid #000000;
+    }
+    
+    .custom-border-left .ag-cell {
+        border-left: 2px solid #000000;
+    }
+    
+    /* Center-align header */
+    .header-center .ag-header-cell {
+        text-align: center !important;
+    }
+    
+    /* Left-align header */
+    .header-left .ag-header-cell {
+        text-align: left !important;
+    }
+    
+    /* Font size customization */
+    .header-large .ag-header-cell {
+        font-size: 18px !important;
+    }
+    
+    .header-small .ag-header-cell {
+        font-size: 12px !important;
+    }
+
+    .header-center .ag-header-cell {
+    background-color: red !important;
+    }
+    </style>
+    """
+
+st.markdown(markdown, unsafe_allow_html=True)
 
 grid_table = AgGrid(display, 
                     gridOptions=gridOptions,
