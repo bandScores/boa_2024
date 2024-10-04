@@ -59,6 +59,17 @@ markdown = """
 
 st.markdown(markdown, unsafe_allow_html=True)
 
+css = """
+<style>
+    .my-header-class .ag-header-cell-label {
+        justify-content: center !important;
+        font-size: 10px !important;
+    }
+</style>
+"""
+
+st.markdown(css, unsafe_allow_html=True)
+
 raw = pd.read_csv('boa_2024.csv')
 raw = raw.rename(columns={'P/S/F': 'Round', 'School Full':'School'})
 raw['Week'] = 'Week ' + raw['Week Num'].astype('str')
@@ -151,7 +162,7 @@ gridOptions = {
         {'headerName': 'Avg.', 'field': 'Mus_Avg', 'width':90, "cellStyle": {"border-right": "4px solid #FF0000"}, 
          'headerTextAlign':'center', "valueGetter": "data.Mus_Avg.toFixed(3) + '  (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
-         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"}], 'headerGroupClass':'custom-header-group'},
+         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"}]},
         
         {'headerName': 'Visual', 'children': [
         {'headerName': 'Individual', 'field': 'VPI', 'width':90, 
@@ -165,7 +176,7 @@ gridOptions = {
         {'headerName': 'Average', 'field': 'Vis_Avg', 'width':90, "cellStyle": {"border-right": "4px solid #FF0000"},
          "valueGetter": "data.Vis_Avg.toFixed(3) + '  (' + data.Vis_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
-         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Vis_Avg - nodeB.data.Vis_Avg; }"}], 'headerGroupClass':'custom-header-group'},
+         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Vis_Avg - nodeB.data.Vis_Avg; }"}]},
 
         {'headerName': 'Music GE1', 'field': 'MGE1', 'width':90, "cellStyle": {"text-align": "center"},
          "valueGetter": "data.MGE1.toFixed(3) + '  (' + data.MGE1_Rank + ')'",  # Combine Score and Rank into one string
