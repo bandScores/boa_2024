@@ -36,6 +36,10 @@ markdown = """
     ag-header-cell {
         justify-content: center !important;  /* Center align the header text */
     }
+
+    ag-header-cell-label {
+        justify-content: center !important;  /* Center align the header text */
+    }
     
     /* General grid container styles */
     .ag-theme-streamlit {
