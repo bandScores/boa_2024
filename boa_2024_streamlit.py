@@ -32,6 +32,10 @@ markdown = """
         word-wrap: break-word;            /* Break long words if necessary */
         overflow-wrap: break-word;        /* Ensure word breaks occur properly */
     }
+
+    ag-header-cell {
+        justify-content: center !important;  /* Center align the header text */
+    }
     
     /* General grid container styles */
     .ag-theme-streamlit {
@@ -135,67 +139,68 @@ gridOptions = {
         {'headerName': 'School', 'field': 'School', 'width':180, 'pinned':'left', 'filter': 'true'}, #auto
         {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true', 'hide':'true', "cellStyle": {"border-right": "4px solid #FF0000"}}, #70
         
-        {'headerName': 'Music Ind.', 'field': 'MPI', 'width':90, 'wrapHeaderText': 'true',
+        {'headerName': 'Music Ind.', 'field': 'MPI', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center"},
          "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
-        {'headerName': 'Music Ens.', 'field': 'MPE', 'width':90, 'wrapHeaderText': 'true',
+        {'headerName': 'Music Ens.', 'field': 'MPE', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center"},
          "valueGetter": "data.MPE.toFixed(3) + '  (' + data.MPE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPE - nodeB.data.MPE; }"},     
-        {'headerName': 'Music Average', 'field': 'Mus_Avg', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"border-right": "4px solid #FF0000"}, 
+        {'headerName': 'Music Average', 'field': 'Mus_Avg', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center", "border-right": "4px solid #FF0000"}, 
          "valueGetter": "data.Mus_Avg.toFixed(3) + '  (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"},
         
-        {'headerName': 'Visual Ind.', 'field': 'VPI', 'width':90, 'wrapHeaderText': 'true',
+        {'headerName': 'Visual Ind.', 'field': 'VPI', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center"},
          "valueGetter": "data.VPI.toFixed(3) + '  (' + data.VPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VPI - nodeB.data.VPI; }"},
-        {'headerName': 'Visual Ens.', 'field': 'VPE', 'width':90, 'wrapHeaderText': 'true',
+        {'headerName': 'Visual Ens.', 'field': 'VPE', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center"},
          "valueGetter": "data.VPE.toFixed(3) + '  (' + data.VPE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VPE - nodeB.data.VPE; }"},     
-        {'headerName': 'Visual Average', 'field': 'Vis_Avg', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"border-right": "4px solid #FF0000"},
+        {'headerName': 'Visual Average', 'field': 'Vis_Avg', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center", "border-right": "4px solid #FF0000"},
          "valueGetter": "data.Vis_Avg.toFixed(3) + '  (' + data.Vis_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Vis_Avg - nodeB.data.Vis_Avg; }"},
 
-        {'headerName': 'Music GE1', 'field': 'MGE1', 'width':90, 'wrapHeaderText': 'true',
+        {'headerName': 'Music GE1', 'field': 'MGE1', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center"},
          "valueGetter": "data.MGE1.toFixed(3) + '  (' + data.MGE1_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MGE1 - nodeB.data.MGE1; }"},
-        {'headerName': 'Music GE2', 'field': 'MGE2', 'width':90, 'wrapHeaderText': 'true',
+        {'headerName': 'Music GE2', 'field': 'MGE2', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center"}
          "valueGetter": "data.MGE2.toFixed(3) + '  (' + data.MGE2_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VPE - nodeB.data.VPE; }"},     
-        {'headerName': 'Music GE Total', 'field': 'MGE_Tot', 'width':100, 'wrapHeaderText': 'true', "cellStyle": {"border-right": "4px solid #FF0000"},
+        {'headerName': 'Music GE Total', 'field': 'MGE_Tot', 'width':100, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center", "border-right": "4px solid #FF0000"},
          "valueGetter": "data.MGE_Tot.toFixed(3) + '  (' + data.MGE_Tot_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MGE_Tot - nodeB.data.MGE_Tot; }"},
 
-        {'headerName': 'Visual GE', 'field': 'VGE', 'width':90, 'wrapHeaderText': 'true',
+        {'headerName': 'Visual GE', 'field': 'VGE', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center"},
          "valueGetter": "data.VGE.toFixed(3) + '  (' + data.VGE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VGE - nodeB.data.VGE; }"},
-        {'headerName': 'GE Total', 'field': 'GE_Tot', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"border-right": "4px solid #FF0000"},
+        {'headerName': 'GE Total', 'field': 'GE_Tot', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center", "border-right": "4px solid #FF0000"},
          "valueGetter": "data.GE_Tot.toFixed(3) + '  (' + data.GE_Tot_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.GE_Tot - nodeB.data.GE_Tot; }"},
 
-        {'headerName': 'Subtotal', 'field': 'Subtotal', 'width':90, 'wrapHeaderText': 'true',
+        {'headerName': 'Subtotal', 'field': 'Subtotal', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center"},
          "valueGetter": "data.Subtotal.toFixed(3) + '  (' + data.Subtotal_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Subtotal - nodeB.data.Subtotal; }"},
         
-        {'headerName': 'Pen.', 'field': 'Pen', 'width':65, 'wrapHeaderText': 'true', 'valueFormatter': 'x.toFixed(1)', 'sortable':True},
+        {'headerName': 'Pen.', 'field': 'Pen', 'width':65, 'wrapHeaderText': 'true', 'valueFormatter': 'x.toFixed(1)', 'sortable':True, "cellStyle": {"text-align": "center"}},
         
-         {'headerName': 'Total', 'field': 'Total', 'width':90, 'wrapHeaderText': 'true', "cellClass": "custom-border-right",
+         {'headerName': 'Total', 'field': 'Total', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center"},
          "valueGetter": "data.Total.toFixed(3) + '  (' + data.Place_Overall + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Total - nodeB.data.Total; }"},
 
-        {'headerName': 'Place: Class', 'field': 'Place_Class', 'width':70, 'valueFormatter': 'x.toFixed(0)', 'wrapHeaderText': 'true', 'sortable':True, 'hide':'true'},
+        {'headerName': 'Place: Class', 'field': 'Place_Class', 'width':70, 'valueFormatter': 'x.toFixed(0)', 'wrapHeaderText': 'true', 'sortable':True, 
+         'hide':'true', "cellStyle": {"text-align": "center"}},
 
         
         
