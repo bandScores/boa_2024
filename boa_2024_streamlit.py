@@ -26,12 +26,12 @@ markdown = """
         border-left: 2px solid #000000;  /* Change border for another class */
     }
 
-    .ag-theme-streamlit .custom-header-group .ag-header-group-cell-label {
-    justify-content: center;
-    text-align: center;
-    font-weight: bold;
+    .ag-header-cell-label {
+    white-space: normal !important;
+    word-wrap: break-word;
+    text-align: center;  /* Optional: to center the header text */
     }
-    
+
     .ag-theme-streamlit .custom-header-group .ag-header-group-cell-label {
     justify-content: center;
     text-align: center;
@@ -212,7 +212,7 @@ gridOptions = {
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Total - nodeB.data.Total; }"},
 
-        {'headerName': 'Place: Class', 'field': 'Place_Class', 'maxWidth':70, 'valueFormatter': 'x.toFixed(0)', 'wrapText':True, 'sortable':True, 'hide':'true'},
+        {'headerName': 'Place: Class', 'field': 'Place_Class', 'maxWidth':70, 'valueFormatter': 'x.toFixed(0)', 'headerClass':'wrap-header', 'sortable':True, 'hide':'true'},
 
          
         
@@ -280,7 +280,8 @@ grid_table = AgGrid(display,
                     enable_pagination=True,
                     fit_columns=False,
                     use_container_width=False,
-                    height=550
+                    height=550, 
+                    spacing='5px'
                     #style={'width': '100%', 'height': '500px'}
                    )
 
