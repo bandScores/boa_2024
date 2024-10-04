@@ -188,7 +188,7 @@ gridOptions = {
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Subtotal - nodeB.data.Subtotal; }"},
         
-        {'headerName': 'Pen.', 'field': 'Pen', 'width':90, 'wrapHeaderText': 'true', 'valueFormatter': 'x.toFixed(1)', 'sortable':True},
+        {'headerName': 'Pen.', 'field': 'Pen', 'width':75, 'wrapHeaderText': 'true', 'valueFormatter': 'x.toFixed(1)', 'sortable':True},
         
          {'headerName': 'Total', 'field': 'Total', 'width':90, 'wrapHeaderText': 'true', "cellClass": "custom-border-right",
          "valueGetter": "data.Total.toFixed(3) + '  (' + data.Place_Overall + ')'",  # Combine Score and Rank into one string
