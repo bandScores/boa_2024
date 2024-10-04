@@ -131,7 +131,7 @@ gridOptions = {
         {'headerName': 'School', 'field': 'School', 'width':180, 'pinned':'left', 'filter': 'true'}, #auto
         {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true', 'hide':'true', "cellStyle": {"border-right": "4px solid #FF0000"}}, #70
 
-        {'headerName': 'Music', 'textAlign':'center', 'children': [
+        {'headerName': 'Music', "cellStyle": {"text-align": "center"}, 'children': [
         {'headerName': 'Ind.', 'field': 'MPI', 'width':90,
          "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
