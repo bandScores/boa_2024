@@ -26,15 +26,23 @@ markdown = """
         border-left: 2px solid #000000;  /* Change border for another class */
     }
 
-    custom-header .ag-header-cell-label {
-    font-size: 16px !important;  /* Adjust the font size as needed */
-    font-weight: bold;  /* Optional: to make the text bold */
+    /* Center-align header */
+    .header-center .ag-header-cell-label {
+    text-align: center;
     }
 
-    .ag-theme-streamlit .custom-header-group .ag-header-group-cell-label {
-    justify-content: center;
-    text-align: center;
-    font-weight: bold;
+    /* Left-align header */
+    .header-left .ag-header-cell-label {
+        text-align: left;
+    }
+    
+    /* Font size customization */
+    .header-large .ag-header-cell-label {
+        font-size: 18px;
+    }
+    
+    .header-small .ag-header-cell-label {
+        font-size: 12px;
     }
     
     /* General grid container styles */
@@ -211,8 +219,8 @@ gridOptions = {
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Total - nodeB.data.Total; }"},
 
-        {'headerName': 'Place: Class', 'field': 'Place_Class', 'maxWidth':80, 'valueFormatter': 'x.toFixed(0)', 'wrapHeaderText':True, 'headerStyle':{"text-align": "center"}, 
-         'sortable':True, 'hide':'true'},
+        {'headerName': 'Place: Class', 'field': 'Place_Class', 'maxWidth':80, 'valueFormatter': 'x.toFixed(0)', 'wrapHeaderText':True, 
+         'headerClass': 'header-center header-large', 'sortable':True, 'hide':'true'},
 
          
         
