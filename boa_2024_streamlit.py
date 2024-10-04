@@ -260,8 +260,8 @@ markdown = """
     """
 
 custom_css = {
-        '.ag-header-cell': {'text-align': 'center !important;'},
-        '.ag-header-cell-label': {'font-size': '18px !important;'}
+        #'.ag-header-cell': {'text-align': 'center !important;'},
+        '.ag-header-cell-label': {'text-align': 'center !important;', 'font-size': '14px !important;'}
 }
 
 
