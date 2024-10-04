@@ -26,18 +26,14 @@ markdown = """
         border-left: 2px solid #000000;  /* Change border for another class */
     }
 
-    .ag-header-cell-label .ag-header-cell-text {
-        white-space: normal !important;   /* Ensure text wrapping */
-        text-align: center;               /* Optional: center-align the header text */
-        word-wrap: break-word;            /* Break long words if necessary */
-        overflow-wrap: break-word;        /* Ensure word breaks occur properly */
+    .custom-header .ag-header-cell-label {
+        justify-content: center !important;  /* Center align the header text */
+        white-space: normal !important;      /* Enable text wrapping */
+        text-align: center !important;       /* Ensure text is centered */
+        overflow-wrap: break-word;           /* Break words for wrapping */
     }
 
     ag-header-cell {
-        justify-content: center !important;  /* Center align the header text */
-    }
-
-    .custom-header .ag-header-cell-label {
         justify-content: center !important;  /* Center align the header text */
     }
     
@@ -143,15 +139,15 @@ gridOptions = {
         {'headerName': 'School', 'field': 'School', 'width':180, 'pinned':'left', 'filter': 'true'}, #auto
         {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true', 'hide':'true', "cellStyle": {"border-right": "4px solid #FF0000"}}, #70
         
-        {'headerName': 'Music Ind.', 'field': 'MPI', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center"}, "headerClass": "custom-header", 
+        {'headerName': 'Music Ind.', 'field': 'MPI', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"textAlign": "center"}, "headerClass": "custom-header", 
          "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
-        {'headerName': 'Music Ens.', 'field': 'MPE', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center"}, "headerClass": "custom-header",
+        {'headerName': 'Music Ens.', 'field': 'MPE', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"textAlign": "center"}, "headerClass": "custom-header",
          "valueGetter": "data.MPE.toFixed(3) + '  (' + data.MPE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPE - nodeB.data.MPE; }"},     
-        {'headerName': 'Music Average', 'field': 'Mus_Avg', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center", "border-right": "4px solid #FF0000"}, 
+        {'headerName': 'Music Average', 'field': 'Mus_Avg', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"textAlign": "center", "border-right": "4px solid #FF0000"}, 
          "headerClass": "custom-header", "valueGetter": "data.Mus_Avg.toFixed(3) + '  (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"},
