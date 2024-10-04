@@ -26,8 +26,10 @@ markdown = """
         border-left: 2px solid #000000;  /* Change border for another class */
     }
 
-    ag-theme-streamlit .cellCenter .ag-cell-wrapper {
+    .ag-theme-streamlit .custom-header-group .ag-header-group-cell-label {
     justify-content: center;
+    text-align: center;
+    font-weight: bold;
     }
     
     /* General grid container styles */
@@ -131,7 +133,7 @@ gridOptions = {
         {'headerName': 'School', 'field': 'School', 'width':180, 'pinned':'left', 'filter': 'true'}, #auto
         {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true', 'hide':'true', "cellStyle": {"border-right": "4px solid #FF0000"}}, #70
 
-        {'headerName': 'Music', 'cellClass': 'cellCenter', 'children': [
+        {'headerName': 'Music', 'children': [
         {'headerName': 'Ind.', 'field': 'MPI', 'width':90,
          "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
@@ -143,9 +145,9 @@ gridOptions = {
         {'headerName': 'Avg.', 'field': 'Mus_Avg', 'width':90, "cellStyle": {"border-right": "4px solid #FF0000"}, 
          'headerTextAlign':'center', "valueGetter": "data.Mus_Avg.toFixed(3) + '  (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
-         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"}], 'headerClass':'center-header-group'},
+         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"}], 'headerGroupClass':'custom-header-group'},
         
-        {'headerName': 'Visual', 'cellClass': 'cellCenter', 'children': [
+        {'headerName': 'Visual', 'children': [
         {'headerName': 'Individual', 'field': 'VPI', 'width':90, 
          "valueGetter": "data.VPI.toFixed(3) + '  (' + data.VPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
@@ -157,7 +159,7 @@ gridOptions = {
         {'headerName': 'Average', 'field': 'Vis_Avg', 'width':90, "cellStyle": {"border-right": "4px solid #FF0000"},
          "valueGetter": "data.Vis_Avg.toFixed(3) + '  (' + data.Vis_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
-         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Vis_Avg - nodeB.data.Vis_Avg; }"}], 'headerClass':'center-header-group'},
+         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Vis_Avg - nodeB.data.Vis_Avg; }"}], 'headerGroupClass':'custom-header-group'},
 
         {'headerName': 'Music GE1', 'field': 'MGE1', 'width':90, "cellStyle": {"text-align": "center"},
          "valueGetter": "data.MGE1.toFixed(3) + '  (' + data.MGE1_Rank + ')'",  # Combine Score and Rank into one string
