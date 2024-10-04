@@ -280,7 +280,7 @@ grid_table = AgGrid(display,
                     enable_pagination=True,
                     fit_columns=False,
                     use_container_width=False,
-                    height=450
+                    height=550
                     #style={'width': '100%', 'height': '500px'}
                    )
 
