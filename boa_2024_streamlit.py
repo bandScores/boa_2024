@@ -144,79 +144,77 @@ gridOptions = {
     'paginationPageSize': 100,
     'cellStyle': {'fontSize': '5px'},
     'columnDefs': [
-        {'headerName': 'Date', 'field': 'Date', 'width':85, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #85
-        {'headerName': 'Event', 'field': 'Event', 'width':150, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #auto
-        {'headerName': 'Round', 'field': 'Round', 'width':80, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #80
-        {'headerName': 'School', 'field': 'School', 'width':180, 'pinned':'left', 'filter': 'true'}, #auto
-        {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true', 'hide':'true', "cellStyle": {"border-right": "4px solid #FF0000"}}, #70
+        {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #85
+        {'headerName': 'Event', 'field': 'Event', 'maxWidth':180, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #auto
+        {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #80
+        {'headerName': 'School', 'field': 'School', 'maxWidth':180, 'pinned':'left', 'filter': 'true'}, #auto
+        {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned':'left', 'filter': 'true', 'hide':'true', "cellStyle": {"border-right": "4px solid #FF0000"}}, #70
 
         {'headerName': 'Music', 'children': [
-        {'headerName': 'Ind.', 'field': 'MPI', 'width':90,
+        {'headerName': 'Ind.', 'field': 'MPI', 'maxWidth':90,
          "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
-        {'headerName': 'Ens.', 'field': 'MPE', 'width':90, 
+        {'headerName': 'Ens.', 'field': 'MPE', 'maxWidth':90, 
          "valueGetter": "data.MPE.toFixed(3) + '  (' + data.MPE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPE - nodeB.data.MPE; }"},     
-        {'headerName': 'Avg.', 'field': 'Mus_Avg', 'width':90, "cellStyle": {"border-right": "4px solid #FF0000"}, 
+        {'headerName': 'Avg.', 'field': 'Mus_Avg', 'maxWidth':90, "cellStyle": {"border-right": "4px solid #FF0000"}, 
          'headerTextAlign':'center', "valueGetter": "data.Mus_Avg.toFixed(3) + '  (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"}]},
         
         {'headerName': 'Visual', 'children': [
-        {'headerName': 'Ind.', 'field': 'VPI', 'width':90, 
+        {'headerName': 'Ind.', 'field': 'VPI', 'maxWidth':90, 
          "valueGetter": "data.VPI.toFixed(3) + '  (' + data.VPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VPI - nodeB.data.VPI; }"},
-        {'headerName': 'Ens.', 'field': 'VPE', 'width':90,
+        {'headerName': 'Ens.', 'field': 'VPE', 'maxWidth':90,
          "valueGetter": "data.VPE.toFixed(3) + '  (' + data.VPE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VPE - nodeB.data.VPE; }"},     
-        {'headerName': 'Avg.', 'field': 'Vis_Avg', 'width':90, "cellStyle": {"border-right": "4px solid #FF0000"},
+        {'headerName': 'Avg.', 'field': 'Vis_Avg', 'maxWidth':90, "cellStyle": {"border-right": "4px solid #FF0000"},
          "valueGetter": "data.Vis_Avg.toFixed(3) + '  (' + data.Vis_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Vis_Avg - nodeB.data.Vis_Avg; }"}]},
 
         {'headerName': 'General Effect', 'children': [
-        {'headerName': 'Mus GE1', 'field': 'MGE1', 'width':90, "cellStyle": {"text-align": "center"},
+        {'headerName': 'Mus GE1', 'field': 'MGE1', 'maxWidth':90, "cellStyle": {"text-align": "center"},
          "valueGetter": "data.MGE1.toFixed(3) + '  (' + data.MGE1_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MGE1 - nodeB.data.MGE1; }"},
-        {'headerName': 'Mus GE2', 'field': 'MGE2', 'width':90, "cellStyle": {"text-align": "center"},
+        {'headerName': 'Mus GE2', 'field': 'MGE2', 'maxWidth':90, "cellStyle": {"text-align": "center"},
          "valueGetter": "data.MGE2.toFixed(3) + '  (' + data.MGE2_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VPE - nodeB.data.VPE; }"},     
-        {'headerName': 'MGE Total', 'field': 'MGE_Tot', 'width':100, "cellStyle": {"text-align": "center"},
+        {'headerName': 'MGE Total', 'field': 'MGE_Tot', 'maxWidth':100, "cellStyle": {"text-align": "center"},
          "valueGetter": "data.MGE_Tot.toFixed(3) + '  (' + data.MGE_Tot_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MGE_Tot - nodeB.data.MGE_Tot; }"}, 
-        {'headerName': 'Vis GE', 'field': 'VGE', 'width':90, "cellStyle": {"text-align": "center"},
+        {'headerName': 'Vis GE', 'field': 'VGE', 'maxWidth':90, "cellStyle": {"text-align": "center"},
          "valueGetter": "data.VGE.toFixed(3) + '  (' + data.VGE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VGE - nodeB.data.VGE; }"},
-        {'headerName': 'GE Total', 'field': 'GE_Tot', 'width':90, "cellStyle": {"text-align": "center", "border-right": "4px solid #FF0000"},
+        {'headerName': 'GE Total', 'field': 'GE_Tot', 'maxWidth':90, "cellStyle": {"text-align": "center", "border-right": "4px solid #FF0000"},
          "valueGetter": "data.GE_Tot.toFixed(3) + '  (' + data.GE_Tot_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.GE_Tot - nodeB.data.GE_Tot; }"}]},
 
-        {'headerName': 'Subtotal', 'field': 'Subtotal', 'width':90, "cellStyle": {"text-align": "center"},
+        {'headerName': 'Subtotal', 'field': 'Subtotal', 'maxWidth':90, "cellStyle": {"text-align": "center"},
          "valueGetter": "data.Subtotal.toFixed(3) + '  (' + data.Subtotal_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Subtotal - nodeB.data.Subtotal; }"},
         
-        {'headerName': 'Pen.', 'field': 'Pen', 'width':65, 'valueFormatter': 'x.toFixed(1)', 'sortable':True, "cellStyle": {"text-align": "center"}},
+        {'headerName': 'Pen.', 'field': 'Pen', 'maxWidth':65, 'valueFormatter': 'x.toFixed(1)', 'sortable':True, "cellStyle": {"text-align": "center"}},
         
-         {'headerName': 'Total', 'field': 'Total', 'width':90, "cellStyle": {"text-align": "center"},
+         {'headerName': 'Total', 'field': 'Total', 'maxWidth':90, "cellStyle": {"text-align": "center"},
          "valueGetter": "data.Total.toFixed(3) + '  (' + data.Place_Overall + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Total - nodeB.data.Total; }"},
 
-        {'headerName': 'Place: Class', 'field': 'Place_Class', 'width':70, 'valueFormatter': 'x.toFixed(0)', 'sortable':True, 
+        {'headerName': 'Place: Class', 'field': 'Place_Class', 'maxWidth':70, 'valueFormatter': 'x.toFixed(0)', 'sortable':True, 
          'hide':'true', "cellStyle": {"text-align": "center"}},
 
-        
-        
          
         
         # {'headerName': 'Visual GE', 'children':[
@@ -283,7 +281,7 @@ grid_table = AgGrid(display,
                     enable_pagination=True,
                     fit_columns=False,
                     use_container_width=False,
-                    #height=600
+                    height=450
                     #style={'width': '100%', 'height': '500px'}
                    )
 
