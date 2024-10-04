@@ -169,7 +169,7 @@ gridOptions = {
          "valueGetter": "data.MGE1.toFixed(3) + '  (' + data.MGE1_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MGE1 - nodeB.data.MGE1; }"},
-        {'headerName': 'Music GE2', 'field': 'MGE2', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center"}
+        {'headerName': 'Music GE2', 'field': 'MGE2', 'width':90, 'wrapHeaderText': 'true', "cellStyle": {"text-align": "center"},
          "valueGetter": "data.MGE2.toFixed(3) + '  (' + data.MGE2_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VPE - nodeB.data.VPE; }"},     
