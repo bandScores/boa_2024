@@ -259,7 +259,39 @@ markdown = """
     </style>
     """
 
-st.markdown(markdown, unsafe_allow_html=True)
+custom_css = {
+        '.ag-header-cell': {'text-align': 'center !important;'},
+        '.ag-header-cell-label': {'font-size': '18px !important;'}
+}
+
+
+    #     .header-center .ag-header-cell {
+    #     text-align: center !important;
+    # }
+    
+    # /* Left-align header */
+    # .header-left .ag-header-cell {
+    #     text-align: left !important;
+    # }
+    
+    # /* Font size customization */
+    # .header-large .ag-header-cell {
+    #     font-size: 18px !important;
+    # }
+    
+    # .header-small .ag-header-cell {
+    #     font-size: 12px !important;
+    # }
+
+    # .header-center .ag-header-cell {
+    # background-color: red !important;
+    # }
+    # </style>
+    # """
+
+
+
+#st.markdown(markdown, unsafe_allow_html=True)
 
 grid_table = AgGrid(display, 
                     gridOptions=gridOptions,
@@ -270,7 +302,8 @@ grid_table = AgGrid(display,
                     fit_columns=False,
                     use_container_width=False,
                     height=550, 
-                    spacing='4px'
+                    spacing='4px',
+                    custom_css = custom_css
                     #style={'width': '100%', 'height': '500px'}
                    )
 
