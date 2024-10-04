@@ -90,11 +90,12 @@ gridOptions = {
     'cellStyle': {'fontSize': '5px'},
     'columnDefs': [
         {'headerName': 'Date', 'children':
-                [{'headerName':'', 'field': 'Date', 'maxWidth':85, 'pinned':'left', 'filter': 'true'}], 'hide':'true'}, #85
-        {'headerName': 'Event', 'field': 'Event', 'width':170, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #auto
-        {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned':'left', 'filter': 'true', 'hide':'true'}, #80
-        {'headerName': 'School', 'field': 'School', 'width':190, 'pinned':'left', 'filter': 'true'}, #auto
-        {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned':'left', 'filter': 'true', 'hide':'true', "cellStyle": {"border-right": "4px solid #FF0000"}}, #70
+                [{'headerName':'', 'field': 'Date', 'maxWidth':85, 'pinned':'left', 'filter': 'true'}], 'hide':'true', 'headerClass': 'parent-header-left'}, #85
+        {'headerName': 'Event', 'field': 'Event', 'width':170, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-left'}, #auto
+        {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-left'}, #80
+        {'headerName': 'School', 'field': 'School', 'width':190, 'pinned':'left', 'filter': 'true', 'headerClass': 'parent-header-left'}, #auto
+        {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-left',
+         "cellStyle": {"border-right": "4px solid #FF0000"}}, #70
 
         {'headerName': 'Music', 'children': [
         {'headerName': 'Ind.', 'field': 'MPI', 'maxWidth':90,
@@ -108,7 +109,7 @@ gridOptions = {
         {'headerName': 'Avg.', 'field': 'Mus_Avg', 'maxWidth':90, "cellStyle": {"border-right": "4px solid #FF0000"}, 
          'headerTextAlign':'center', "valueGetter": "data.Mus_Avg.toFixed(3) + '  (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
-         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"}]},
+         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"}], 'headerClass': 'parent-header-center'},
         
         {'headerName': 'Visual', 'children': [
         {'headerName': 'Ind.', 'field': 'VPI', 'maxWidth':90, 
@@ -122,7 +123,7 @@ gridOptions = {
         {'headerName': 'Avg.', 'field': 'Vis_Avg', 'maxWidth':90, "cellStyle": {"border-right": "4px solid #FF0000"},
          "valueGetter": "data.Vis_Avg.toFixed(3) + '  (' + data.Vis_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
-         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Vis_Avg - nodeB.data.Vis_Avg; }"}]},
+         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Vis_Avg - nodeB.data.Vis_Avg; }"}], 'headerClass': 'parent-header-center'},
 
         {'headerName': 'General Effect', 'children': [
         {'headerName': 'Mus GE1', 'field': 'MGE1', 'maxWidth':90,
@@ -144,7 +145,7 @@ gridOptions = {
         {'headerName': 'GE Total', 'field': 'GE_Tot', 'maxWidth':90, "cellStyle": {"border-right": "4px solid #FF0000"},
          "valueGetter": "data.GE_Tot.toFixed(3) + '  (' + data.GE_Tot_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
-         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.GE_Tot - nodeB.data.GE_Tot; }"}]},
+         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.GE_Tot - nodeB.data.GE_Tot; }"}], 'headerClass': 'parent-header-center'},
 
         {'headerName': 'Subtotal', 'field': 'Subtotal', 'maxWidth':90, 
          "valueGetter": "data.Subtotal.toFixed(3) + '  (' + data.Subtotal_Rank + ')'",  # Combine Score and Rank into one string
@@ -159,7 +160,7 @@ gridOptions = {
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Total - nodeB.data.Total; }"},
 
         {'headerName': 'Place: Class', 'field': 'Place_Class', 'maxWidth':80, 'valueFormatter': 'x.toFixed(0)', 'wrapHeaderText':True, 
-         'headerClass': 'header-center header-large', 'sortable':True, 'hide':'true'},
+         'headerClass': 'header-center header-large', 'sortable':True, 'hide':'true', 'headerClass': 'parent-header-center'},
 
          
         
@@ -262,7 +263,8 @@ markdown = """
 
 custom_css = {
         #'.ag-header-cell': {'text-align': 'center !important;'},
-        '.ag-header-group-cell': {'justify-content': 'center !important;', 'font-size': '14px !important;', 'font-weight': 'bold !important;'}, 
+        '.parent-header-center': {'justify-content': 'center !important;', 'font-size': '14px !important;', 'font-weight': 'bold !important;'},
+        '.parent-header-left': {'justify-content': 'left !important;', 'font-size': '14px !important;', 'font-weight': 'bold !important;'},
         '.ag-header-cell-label': {'justify-content': 'left !important;', 'font-size': '12px !important;'}, 
         '.ag-cell': {'border-right': '2px solid #000000;'}, 
         '.ag-theme-streamlit': {'width': '100vw !important;', 'height': 'calc(100vh - 100px) !important;', 'overflow-y': 'auto !important;'}
