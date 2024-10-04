@@ -253,7 +253,7 @@ if event is None:
 
 if round is None:
     gridOptions['columnDefs'][2].pop('hide', None)
-if round is "Finals":
+if round != "Finals":
     gridOptions['columnDefs'][-1].pop('hide', None)
 
 if class_ is None:
