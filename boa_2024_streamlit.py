@@ -212,7 +212,7 @@ gridOptions = {
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Total - nodeB.data.Total; }"},
 
-        {'headerName': 'Place: Class', 'field': 'Place_Class', 'maxWidth':70, 'valueFormatter': 'x.toFixed(0)', 'wrapText':True 'sortable':True, 'hide':'true'},
+        {'headerName': 'Place: Class', 'field': 'Place_Class', 'maxWidth':70, 'valueFormatter': 'x.toFixed(0)', 'wrapText':True, 'sortable':True, 'hide':'true'},
 
          
         
