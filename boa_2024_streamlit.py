@@ -267,8 +267,21 @@ custom_css = {
         '.parent-header-left': {'justify-content': 'left !important;', 'font-size': '14px !important;', 'font-weight': 'bold !important;'},
         '.ag-header-cell-label': {'justify-content': 'left !important;', 'font-size': '12px !important;'}, 
         '.ag-cell': {'border-right': '2px solid #000000;'}, 
-        '.ag-theme-streamlit': {'width': '100vw !important;', 'height': 'calc(100vh - 100px) !important;', 'overflow-y': 'auto !important;'}
-    }
+        '.ag-theme-streamlit': {'width': '100vw !important;', 'height': 'calc(100vh - 100px) !important;', 'overflow-y': 'auto !important;'}, 
+        '@media only screen and (max-width: 600px)': {
+                '.ag-header-cell-label': {
+                    'font-size': '12px !important;',  # Smaller font for mobile
+                    'padding': '5px !important;',  # Reduce padding to fit on small screens
+                },
+                '.ag-root-wrapper': {
+                    'width': '100% !important;',  # Full width on mobile
+                    'overflow-x': 'scroll !important;'  # Allow horizontal scrolling if needed
+                },
+                '.ag-cell': {
+                    'font-size': '12px !important;',  # Smaller font in cells for mobile
+                    'padding': '5px !important;'  # Adjust padding for mobile
+                }}
+        }
 
 
 
