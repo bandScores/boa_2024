@@ -263,7 +263,8 @@ markdown = """
 custom_css = {
         #'.ag-header-cell': {'text-align': 'center !important;'},
         '.ag-header-group-cell': {'justify-content': 'center !important;', 'font-size': '14px !important;', 'font-weight': 'bold !important;'}, 
-        '.ag-header-cell-label': {'justify-content': 'left !important;', 'font-size': '12px !important;'}
+        '.ag-header-cell-label': {'justify-content': 'left !important;', 'font-size': '12px !important;'}, 
+        '.ag-cell': {'border-right': '2px solid #000000;'}
 }
 
 
