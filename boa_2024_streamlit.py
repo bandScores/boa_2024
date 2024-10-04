@@ -18,7 +18,6 @@ st.set_page_config(layout="wide")
 # Responsive CSS for both desktop and mobile
 markdown = """
     <style>
-    
     /* Custom borders for cells */
     .custom-border-right .ag-cell {
         border-right: 2px solid #000000;
@@ -29,24 +28,27 @@ markdown = """
     }
     
     /* Center-align header */
-    .header-center .ag-header-cell-label {
-        text-align: center;
+    .header-center .ag-header-cell {
+        text-align: center !important;
     }
     
     /* Left-align header */
-    .header-left .ag-header-cell-label {
-        text-align: left;
+    .header-left .ag-header-cell {
+        text-align: left !important;
     }
     
     /* Font size customization */
-    .header-large .ag-header-cell-label {
-        font-size: 18px;
+    .header-large .ag-header-cell {
+        font-size: 18px !important;
     }
     
-    .header-small .ag-header-cell-label {
-        font-size: 12px;
+    .header-small .ag-header-cell {
+        font-size: 12px !important;
     }
-    
+
+    .header-center .ag-header-cell {
+    background-color: red !important;
+    }
     </style>
     """
 
