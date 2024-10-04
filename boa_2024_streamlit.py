@@ -18,6 +18,10 @@ st.set_page_config(layout="wide")
 # Responsive CSS for both desktop and mobile
 markdown = """
     <style>
+    body {
+    background-color: yellow;
+    }
+    
     /* Custom borders for cells */
     .custom-border-right .ag-cell {
         border-right: 2px solid #000000;
