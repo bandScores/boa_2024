@@ -139,15 +139,15 @@ gridOptions = {
         {'headerName': 'School', 'field': 'School', 'width':180, 'pinned':'left', 'filter': 'true'}, #auto
         {'headerName': 'Class', 'field': 'Class', 'width':70, 'pinned':'left', 'filter': 'true', 'hide':'true', "cellStyle": {"border-right": "4px solid #FF0000"}}, #70
         
-        {'headerName': 'Music Ind.', 'field': 'MPI', 'width':90, "cellStyle": {"textAlign": "center"}, 'headerTextAlign':'center', 
+        {'headerName': 'Music Ind.', 'field': 'MPI', 'width':90, "cellStyle": {"textAlign": "center", 'headerTextAlign':'center'}, 
          "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
-        {'headerName': 'Music Ens.', 'field': 'MPE', 'width':90, "cellStyle": {"textAlign": "center"}, 'headerTextAlign':'center',
+        {'headerName': 'Music Ens.', 'field': 'MPE', 'width':90, "cellStyle": {"textAlign": "center", 'headerTextAlign':'center'},
          "valueGetter": "data.MPE.toFixed(3) + '  (' + data.MPE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPE - nodeB.data.MPE; }"},     
-        {'headerName': 'Music Average', 'field': 'Mus_Avg', 'width':90, "cellStyle": {"textAlign": "center", "border-right": "4px solid #FF0000"}, 
+        {'headerName': 'Music Average', 'field': 'Mus_Avg', 'width':90, "cellStyle": {"textAlign": "center", 'headerTextAlign':'center', "border-right": "4px solid #FF0000"}, 
          'headerTextAlign':'center', "valueGetter": "data.Mus_Avg.toFixed(3) + '  (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"},
