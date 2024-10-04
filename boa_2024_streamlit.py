@@ -26,13 +26,6 @@ markdown = """
         border-left: 2px solid #000000;  /* Change border for another class */
     }
 
-    .custom-header .ag-header-cell-label {
-        justify-content: center !important;  /* Center align the header text */
-        white-space: normal !important;      /* Enable text wrapping */
-        text-align: center !important;       /* Ensure text is centered */
-        overflow-wrap: break-word;           /* Break words for wrapping */
-    }
-
     ag-header-cell {
         justify-content: center !important;  /* Center align the header text */
     }
