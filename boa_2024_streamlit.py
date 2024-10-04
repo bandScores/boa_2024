@@ -96,7 +96,7 @@ gridOptions = {
         {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned':'left', 'filter': 'true', 'hide':'true', "cellStyle": {"border-right": "4px solid #FF0000"}}, #70
 
         {'headerName': 'Music', 'children': [
-        {'headerName': 'Ind.', 'field': 'MPI', 'maxWidth':90, 'headerClass': {'text-align': 'center'},
+        {'headerName': 'Ind.', 'field': 'MPI', 'maxWidth':90,
          "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
@@ -261,7 +261,8 @@ markdown = """
 
 custom_css = {
         #'.ag-header-cell': {'text-align': 'center !important;'},
-        '.ag-header-cell-label': {'justify-content': 'center !important;', 'font-size': '14px !important;'}
+        '.ag-header-group-cell': {'justify-content': 'center !important;', 'font-size': '14px !important;', 'font-weight': 'bold !important;'}, 
+        '.ag-header-cell-label': {'justify-content': 'left !important;', 'font-size': '12px !important;'}
 }
 
 
