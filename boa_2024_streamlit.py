@@ -19,18 +19,20 @@ st.set_page_config(layout="wide")
 markdown = """
     <style>
     
-    .ag-theme-streamlit .custom-border-right .ag-cell {
-        border-right: 2px solid #000000;  /* Change border for custom class */
+    /* Custom borders for cells */
+    .custom-border-right .ag-cell {
+        border-right: 2px solid #000000;
     }
-    .ag-theme-streamlit .custom-border-left .ag-cell {
-        border-left: 2px solid #000000;  /* Change border for another class */
+    
+    .custom-border-left .ag-cell {
+        border-left: 2px solid #000000;
     }
-
+    
     /* Center-align header */
     .header-center .ag-header-cell-label {
-    text-align: center;
+        text-align: center;
     }
-
+    
     /* Left-align header */
     .header-left .ag-header-cell-label {
         text-align: left;
@@ -48,34 +50,23 @@ markdown = """
     /* General grid container styles */
     .ag-theme-streamlit {
         width: 100vw !important;
-        height: calc(100vh - 100px) !important;  /* Adjust based on viewport, with room for header/footer */
+        height: calc(100vh - 100px) !important;
         overflow-y: auto !important;
     }
-
+    
     /* Adjust for small screen sizes like mobile */
-    @media only alpine and (max-width: 600px) {
+    @media only screen and (max-width: 600px) {
         .ag-theme-streamlit {
             width: 100vw !important;
-            height: calc(100vh - 100px) !important;  /* Adjust based on viewport */
-            overflow-x: scroll !important;  /* Allow horizontal scrolling */
-            font-size: 12px !important;  /* Smaller font size on mobile */
+            height: calc(100vh - 100px) !important;
+            overflow-x: scroll !important;
+            font-size: 12px !important;
         }
     }
     </style>
     """
 
 st.markdown(markdown, unsafe_allow_html=True)
-
-css = """
-<style>
-    .my-header-class .ag-header-cell-label {
-        justify-content: center !important;
-        font-size: 10px !important;
-    }
-</style>
-"""
-
-st.markdown(css, unsafe_allow_html=True)
 
 raw = pd.read_csv('boa_2024.csv')
 raw = raw.rename(columns={'P/S/F': 'Round', 'School Full':'School'})
@@ -283,7 +274,7 @@ if class_ is None:
 grid_table = AgGrid(display, 
                     gridOptions=gridOptions,
                     fit_columns_on_grid_load=False,
-                    theme="streamlit",
+                    #theme="streamlit",
                     enable_enterprise_modules=False,
                     enable_pagination=True,
                     fit_columns=False,
