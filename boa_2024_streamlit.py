@@ -89,10 +89,8 @@ gridOptions = {
     'paginationPageSize': 100,
     'cellStyle': {'fontSize': '5px'},
     'columnDefs': [
-        {'headerName': 'Date', 'children':
-                [{'headerName':'', 'field': 'Date', 'maxWidth':85, 'filter': 'true'}], 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left'}, #85
-        {'headerName': 'Event', 'children':
-                [{'headerName':'', 'field': 'Event', 'width':170, 'filter': 'true'}], 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left'}, #auto
+        {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'filter': 'true', 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left'}, #85
+        {'headerName': 'Event', 'field': 'Event', 'width':170, 'filter': 'true', 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left'}, #auto
         {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-left'}, #80
         {'headerName': 'School', 'field': 'School', 'width':190, 'pinned':'left', 'filter': 'true', 'headerClass': 'parent-header-left'}, #auto
         {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-left',
