@@ -94,7 +94,7 @@ gridOptions = {
         {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-left'}, #80
         {'headerName': 'School', 'field': 'School', 'width':190, 'pinned':'left', 'filter': 'true', 'headerClass': 'parent-header-left'}, #auto
         {'headerName': 'Class', 'field': 'Class', 'maxWidth':75, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-left',
-         "cellStyle": {"border-right": "4px solid #FF0000"}}, #70
+         'cellClass': 'custom-border-right'}}, #"cellStyle": {"border-right": "4px solid #FF0000"}}, #70
 
         {'headerName': 'Music', 'children': [
         {'headerName': 'Ind.', 'field': 'MPI', 'maxWidth':90, 'headerClass': 'group-header-center',
@@ -105,7 +105,7 @@ gridOptions = {
          "valueGetter": "data.MPE.toFixed(3) + '  (' + data.MPE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPE - nodeB.data.MPE; }"},     
-        {'headerName': 'Avg.', 'field': 'Mus_Avg', 'maxWidth':90, 'headerClass': 'group-header-center', "cellStyle": {"border-right": "4px solid #FF0000"}, 
+        {'headerName': 'Avg.', 'field': 'Mus_Avg', 'maxWidth':90, 'headerClass': 'group-header-center', 'cellClass': 'custom-border-right', # "cellStyle": {"border-right": "4px solid #FF0000"}, 
          'headerTextAlign':'center', "valueGetter": "data.Mus_Avg.toFixed(3) + '  (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"}], 'headerClass': 'parent-header-center'},
@@ -266,7 +266,7 @@ custom_css = {
         '.parent-header-left': {'justify-content': 'left !important;', 'font-size': '14px !important;', 'font-weight': 'bold !important;', 'color': 'black !important;'},
         '.group-header-center': {'justify-content': 'center !important;', 'font-size': '12px !important;', 'color': 'black !important;'},
         #'.ag-header-cell-label': {'justify-content': 'left !important;', 'font-size': '14px !important;', 'font-weight': 'bold !important;', 'color': 'black !important;'}, 
-        '.ag-cell': {'border-right': '2px solid #000000;'}, 
+        '.custom-border-right': {'border-right': '3px solid black !important;'}  # Thick black right border
         '.ag-theme-streamlit': {'overflow-y': 'auto !important;'}, 
         '@media only screen and (max-width: 600px)': {
                 '.ag-header-cell-label': {
