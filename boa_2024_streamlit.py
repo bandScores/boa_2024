@@ -79,6 +79,31 @@ with row_input[2]:
 #with row_input[2]:
 freeze = st.radio('Freeze Date, Event, Round, School, and Class columns', ['Yes', 'No (recommended for mobile users)'])
 
+if event is None and round is None:
+        if class_ is None:
+                st.write("Currently viewing all scores from all rounds and classes")
+        if class_ is not None:
+                st.write("Currently viewing all", class_, " scores from all rounds and classes")
+
+if event is not None and round is None:
+        if class_ is None:
+                st.write("Currently viewing scores from all rounds at the", event)
+        if class_ is not None:
+                st.write("Currently viewing", class_, " scores from all rounds at the", event)
+
+if event is None and round is not None:
+        if class_ is None:
+                st.write("Currently viewing scores from", round, " rounds at all events")
+        if class_ is not None:
+                st.write("Currently viewing all", class_, " scores from", round, " rounds at all events")
+
+if event is not None and round is not None:
+        if class_ is None:
+                st.write("Currently viewing scores from the", round, " round at the", event)
+        if class_ is not None:
+                st.write("Currently viewing", class_, " scores from the", round, " round at the", event)
+
+
 gridOptions = {
     'defaultColDef': {
         'sortable': True,
