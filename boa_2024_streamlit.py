@@ -159,7 +159,7 @@ gridOptions = {
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Total - nodeB.data.Total; }"},
 
         {'headerName': 'Place: Class', 'field': 'Place_Class', 'maxWidth':80, 'valueFormatter': 'x.toFixed(0)', 'wrapHeaderText':True, 
-         'sortable':True, 'hide':'true', 'headerClass': 'parent-header-center'},
+         'sortable':True, 'hide':'true', 'headerClass': 'group-header-center'},
 
          
         
