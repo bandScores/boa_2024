@@ -266,7 +266,7 @@ custom_css = {
         '.parent-header-left': {'justify-content': 'left !important;', 'font-size': '14px !important;', 'font-weight': 'bold !important;', 'color': 'black !important;'},
         '.group-header-center': {'justify-content': 'center !important;', 'font-size': '12px !important;', 'color': 'black !important;'},
         #'.ag-header-cell-label': {'justify-content': 'left !important;', 'font-size': '14px !important;', 'font-weight': 'bold !important;', 'color': 'black !important;'}, 
-        '.custom-border-right': {'border-right': '3px solid black !important;'}  # Thick black right border
+        '.custom-border-right': {'border-right': '3px solid black !important;'},  # Thick black right border
         '.ag-theme-streamlit': {'overflow-y': 'auto !important;'}, 
         '@media only screen and (max-width: 600px)': {
                 '.ag-header-cell-label': {
