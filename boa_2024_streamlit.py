@@ -81,7 +81,7 @@ freeze = st.radio('Freeze Date, Event, Round, School, and Class columns', ['Yes'
 
 if event is None and round is None:
         if class_ is None:
-                st.write('<p style="font-size:16px; font-weight:bold;">All scores from all events, classes, and rounds</p>', unsafe_allow_html=True)
+                st.write('<p style="font-size:20px; font-weight:bold;">All scores from all events, classes, and rounds</p>', unsafe_allow_html=True)
         if class_ is not None:
                 st.write("All", class_, " scores from all events and rounds")
 
