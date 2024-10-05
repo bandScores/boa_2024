@@ -81,27 +81,27 @@ freeze = st.radio('Freeze Date, Event, Round, School, and Class columns', ['Yes'
 
 if event is None and round is None:
         if class_ is None:
-                st.write('<p style="font-size:20px; font-weight:bold;">All scores from all events, classes, and rounds</p>', unsafe_allow_html=True)
+                st.write(f'<p style="font-size:20px; font-weight:bold;">All scores from all events, classes, and rounds</p>', unsafe_allow_html=True)
         if class_ is not None:
-                st.write('<p style="font-size:20px; font-weight:bold;">All {class_} scores from all events and rounds</p>', unsafe_allow_html=True)
+                st.write(f'<p style="font-size:20px; font-weight:bold;">All {class_} scores from all events and rounds</p>', unsafe_allow_html=True)
 
 if event is not None and round is None:
         if class_ is None:
-                st.write('<p style="font-size:20px; font-weight:bold;">{event} - All Rounds and Classes</p>', unsafe_allow_html=True)
+                st.write(f'<p style="font-size:20px; font-weight:bold;">{event} - All Rounds and Classes</p>', unsafe_allow_html=True)
         if class_ is not None:
-                st.write('<p style="font-size:20px; font-weight:bold;">{event} - {class_} Scores from All Rounds</p>', unsafe_allow_html=True)
+                st.write(f'<p style="font-size:20px; font-weight:bold;">{event} - {class_} Scores from All Rounds</p>', unsafe_allow_html=True)
 
 if event is None and round is not None:
         if class_ is None:
-                st.write(round, " scores from events and classes")
+                st.write(f'<p style="font-size:20px; font-weight:bold;">{round} scores from all events and classes</p>', unsafe_allow_html=True)
         if class_ is not None:
-                st.write(class_, " scores from", round, " rounds at all events")
+                st.write(f'<p style="font-size:20px; font-weight:bold;">{class_} scores from {round} rounds at all events</p>', unsafe_allow_html=True)
 
 if event is not None and round is not None:
         if class_ is None:
-                st.write(event, " - ", round)
+                st.write(f'<p style="font-size:20px; font-weight:bold;">{event} - {round}</p>', unsafe_allow_html=True)
         if class_ is not None:
-                st.write(event, " - ", round, " - ", class_, " Scores")
+                st.write(f'<p style="font-size:20px; font-weight:bold;">{event} - {round} - {class_} Scores</p>', unsafe_allow_html=True)
 
 
 gridOptions = {
