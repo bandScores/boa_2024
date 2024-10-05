@@ -262,8 +262,8 @@ markdown = """
 
 custom_css = {
         #'.ag-header-cell': {'text-align': 'center !important;'},
-        '.parent-header-center': {'justify-content': 'center !important;', 'font-size': '14px !important;', 'font-weight': 'bold !important;'},
-        '.parent-header-left': {'justify-content': 'left !important;', 'font-size': '14px !important;', 'font-weight': 'bold !important;'},
+        '.parent-header-center': {'justify-content': 'center !important;', 'font-size': '16px !important;', 'font-weight': 'bold !important;', 'color': 'black !important;'},
+        '.parent-header-left': {'justify-content': 'left !important;', 'font-size': '16px !important;', 'font-weight': 'bold !important;', 'color': 'black !important;'},
         '.ag-header-cell-label': {'justify-content': 'left !important;', 'font-size': '12px !important;'}, 
         '.ag-cell': {'border-right': '2px solid #000000;'}, 
         '.ag-theme-streamlit': {'width': '100vw !important;', 'height': 'calc(100vh - 100px) !important;', 'overflow-y': 'auto !important;'}, 
