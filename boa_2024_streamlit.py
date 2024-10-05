@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder
-#from src.agstyler import PINLEFT, PRECISION_TWO, draw_grid
 
 st.set_page_config(layout="wide")
 # st.markdown(
@@ -19,8 +18,8 @@ raw = pd.read_csv('boa_2024.csv')
 raw = raw.rename(columns={'P/S/F': 'Round', 'School Full':'School'})
 raw['Week'] = 'Week ' + raw['Week Num'].astype('str')
 
-st.title("2024 BOA Scores App")
-st.write("This app shows recaps for Bands of America events from the 2024 season. Use the drop down selectors to filter by event or show round, or leave them empty to view all scores. Click on a column header to cycle through sorting options. When hovering over a column header, click the hamburger menu on the right to view more filtering options. \n")
+#st.title("2024 BOA Scores App")
+#st.write("This app shows recaps for Bands of America events from the 2024 season. Use the drop down selectors to filter by event or show round, or leave them empty to view all scores. Click on a column header to cycle through sorting options. When hovering over a column header, click the hamburger menu on the right to view more filtering options. \n")
 
 cols = ['Date', 'Event', 'Round', 'School', 'Class', 
         'MPI', 'MPI Rank', 'MPE', 'MPE Rank', 'Mus Avg', 'Mus Avg Rank', 
@@ -103,7 +102,6 @@ if event is not None and round is not None:
         if class_ is not None:
                 st.write(f'<p style="font-size:20px; font-weight:bold;">{event} - {round} - {class_} Scores</p>', unsafe_allow_html=True)
 
-
 gridOptions = {
     'defaultColDef': {
         'sortable': True,
@@ -185,30 +183,6 @@ gridOptions = {
 
         {'headerName': 'Place: Class', 'field': 'Place_Class', 'maxWidth':80, 'valueFormatter': 'x.toFixed(0)', 'wrapHeaderText':True, 
          'sortable':True, 'hide':'true', 'headerClass': 'group-header-center'},
-
-         
-        
-        # {'headerName': 'Visual GE', 'children':[
-        #     {'headerName': 'Score','field': 'VGE', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
-        #     {'headerName': '-', 'field': 'VGE Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-        #      'type': 'numericColumn'}]},
-        # {'headerName': 'Total GE', 'children':[
-        #     {'headerName': 'Score','field': 'GE Tot', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
-        #     {'headerName': '-', 'field': 'GE Tot Rank', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-        #      'type': 'numericColumn'}]},
-        # {'headerName': 'Sub','field': 'Subtotal', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'}, 
-        # {'headerName': 'Pen','field': 'Pen', 'width': 50, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(1)'}, 
-        # {'headerName': 'Total','field': 'Total', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-        #      'type': 'numericColumn', 'valueFormatter': 'x.toFixed(3)'},
-        # {'headerName': 'Ranks', 'children':[
-        #     {'headerName': 'Ovr.','field': 'Place: Overall', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-        #      'type': 'numericColumn'},
-        #     {'headerName': 'Class', 'field': 'Place: Class', 'width': 70, 'headerClass': 'left-header','cellStyle': {'textAlign': 'center'}, 
-        #      'type': 'numericColumn'}]},
     ]
 }
 
@@ -231,59 +205,6 @@ if round != "Finals":
 if class_ is None:
     gridOptions['columnDefs'][4].pop('hide', None)
     
-
-# st.markdown(
-#     """
-#     <style>
-#     .ag-theme-streamlit {
-#         width: 100vw;  /* Make grid width responsive to browser width */
-#         height: 100vh;  /* Make grid height responsive to browser height */
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
-
-# Responsive CSS for both desktop and mobile
-markdown = """
-    <style>
-    body {
-    background-color: yellow;
-    }
-    
-    /* Custom borders for cells */
-    .custom-border-right .ag-cell {
-        border-right: 2px solid #000000;
-    }
-    
-    .custom-border-left .ag-cell {
-        border-left: 2px solid #000000;
-    }
-    
-    /* Center-align header */
-    .header-center .ag-header-cell {
-        text-align: center !important;
-    }
-    
-    /* Left-align header */
-    .header-left .ag-header-cell {
-        text-align: left !important;
-    }
-    
-    /* Font size customization */
-    .header-large .ag-header-cell {
-        font-size: 18px !important;
-    }
-    
-    .header-small .ag-header-cell {
-        font-size: 12px !important;
-    }
-
-    .header-center .ag-header-cell {
-    background-color: red !important;
-    }
-    </style>
-    """
 
 custom_css = {
         #'.ag-header-cell': {'text-align': 'center !important;'},
@@ -308,34 +229,6 @@ custom_css = {
                 }}
         }
 
-
-
-    #     .header-center .ag-header-cell {
-    #     text-align: center !important;
-    # }
-    
-    # /* Left-align header */
-    # .header-left .ag-header-cell {
-    #     text-align: left !important;
-    # }
-    
-    # /* Font size customization */
-    # .header-large .ag-header-cell {
-    #     font-size: 18px !important;
-    # }
-    
-    # .header-small .ag-header-cell {
-    #     font-size: 12px !important;
-    # }
-
-    # .header-center .ag-header-cell {
-    # background-color: red !important;
-    # }
-    # </style>
-    # """
-
-
-
 #st.markdown(markdown, unsafe_allow_html=True)
 
 grid_table = AgGrid(display, 
@@ -351,7 +244,6 @@ grid_table = AgGrid(display,
                     custom_css = custom_css
                     #style={'width': '100%', 'height': '500px'}
                    )
-
 
 # styled_df = display.style.set_properties(**{'text-align': 'center'})
 # st.write(styled_df.to_html(index=False, justify='center'), unsafe_allow_html=True)
