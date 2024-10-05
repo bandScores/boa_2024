@@ -83,13 +83,13 @@ if event is None and round is None:
         if class_ is None:
                 st.write('<p style="font-size:20px; font-weight:bold;">All scores from all events, classes, and rounds</p>', unsafe_allow_html=True)
         if class_ is not None:
-                st.write("All", class_, " scores from all events and rounds")
+                st.write('<p style="font-size:20px; font-weight:bold;">All {class_} scores from all events and rounds</p>', unsafe_allow_html=True)
 
 if event is not None and round is None:
         if class_ is None:
-                st.write(event, " - All Rounds and Classes")
+                st.write('<p style="font-size:20px; font-weight:bold;">{event} - All Rounds and Classes</p>', unsafe_allow_html=True)
         if class_ is not None:
-                st.write(event, " - ", class_, " Scores from All Rounds")
+                st.write('<p style="font-size:20px; font-weight:bold;">{event} - {class_} Scores from All Rounds</p>', unsafe_allow_html=True)
 
 if event is None and round is not None:
         if class_ is None:
