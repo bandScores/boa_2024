@@ -81,27 +81,27 @@ freeze = st.radio('Freeze Date, Event, Round, School, and Class columns', ['Yes'
 
 if event is None and round is None:
         if class_ is None:
-                st.write("Currently viewing all scores from all rounds and classes")
+                st.write("All scores from all events, classes, and rounds")
         if class_ is not None:
-                st.write("Currently viewing all", class_, " scores from all rounds and classes")
+                st.write("All", class_, " scores from all events and rounds")
 
 if event is not None and round is None:
         if class_ is None:
-                st.write("Currently viewing scores from all rounds at the", event)
+                st.write(event, " - All Rounds and Classes")
         if class_ is not None:
-                st.write("Currently viewing", class_, " scores from all rounds at the", event)
+                st.write(event, " - ", class_, " Scores from All Rounds")
 
 if event is None and round is not None:
         if class_ is None:
-                st.write("Currently viewing scores from", round, " rounds at all events")
+                st.write(round, " scores from events and classes")
         if class_ is not None:
-                st.write("Currently viewing all", class_, " scores from", round, " rounds at all events")
+                st.write(class_, " scores from", round, " rounds at all events")
 
 if event is not None and round is not None:
         if class_ is None:
-                st.write("Currently viewing scores from the", round, " round at the", event)
+                st.write(event, " - ", round)
         if class_ is not None:
-                st.write("Currently viewing", class_, " scores from the", round, " round at the", event)
+                st.write(event, " - ", round, " - ", class_, " Scores")
 
 
 gridOptions = {
