@@ -14,7 +14,7 @@ st.set_page_config(layout="wide")
 #             unsafe_allow_html=True
 #         )
 
-raw = pd.read_csv('boa_2024.csv')
+raw = pd.read_csv('boa_2024_oct5.csv')
 raw = raw.rename(columns={'P/S/F': 'Round', 'School Full':'School'})
 raw['Week'] = 'Week ' + raw['Week Num'].astype('str')
 
