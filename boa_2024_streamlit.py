@@ -16,7 +16,7 @@ st.set_page_config(layout="wide")
 #         )
 
 url = "https://docs.google.com/spreadsheets/d/1dgV0saovQ5tVe6OeGYHLaLMzh-2qq1EfUVGfQg3XRhU/edit?usp=sharing"
-conn = st.experimental_connection("gsheets", type=GSheetsConnection)
+conn = st.connection("gsheets", type=GSheetsConnection)
 raw = conn.read(spreadsheet=url)
 
 #raw = pd.read_csv('boa_2024_oct12.csv')
