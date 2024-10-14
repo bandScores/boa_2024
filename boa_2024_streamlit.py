@@ -222,16 +222,16 @@ custom_css = {
         '.ag-theme-streamlit': {'overflow-y': 'auto !important;'}, 
         '@media only screen and (max-width: 600px)': {
                 '.ag-header-cell-label': {
-                    'font-size': '8px !important;',  # Smaller font for mobile
-                    'padding': '5px !important;',  # Reduce padding to fit on small screens
+                    'font-size': '5px !important;',  # Smaller font for mobile
+                    'padding': '2px !important;',  # Reduce padding to fit on small screens
                 },
                 '.ag-root-wrapper': {
                     'width': '100% !important;',  # Full width on mobile
                     'overflow-x': 'scroll !important;'  # Allow horizontal scrolling if needed
                 },
                 '.ag-cell': {
-                    'font-size': '8px !important;',  # Smaller font in cells for mobile
-                    'padding': '5px !important;'  # Adjust padding for mobile
+                    'font-size': '5px !important;',  # Smaller font in cells for mobile
+                    'padding': '2px !important;'  # Adjust padding for mobile
                 }}
         }
 
