@@ -222,7 +222,7 @@ custom_css = {
         '.ag-theme-streamlit': {'overflow-y': 'auto !important;'}, 
         '@media only screen and (max-width: 600px)': {
                 '.ag-header-cell-label': {
-                    'font-size': '12px !important;',  # Smaller font for mobile
+                    'font-size': '8px !important;',  # Smaller font for mobile
                     'padding': '5px !important;',  # Reduce padding to fit on small screens
                 },
                 '.ag-root-wrapper': {
@@ -230,7 +230,7 @@ custom_css = {
                     'overflow-x': 'scroll !important;'  # Allow horizontal scrolling if needed
                 },
                 '.ag-cell': {
-                    'font-size': '12px !important;',  # Smaller font in cells for mobile
+                    'font-size': '8px !important;',  # Smaller font in cells for mobile
                     'padding': '5px !important;'  # Adjust padding for mobile
                 }}
         }
