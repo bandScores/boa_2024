@@ -126,7 +126,7 @@ gridOptions = {
          'cellClass': 'custom-border-right'}, #70
 
         {'headerName': 'Music', 'children': [
-        {'headerName': 'Ind.', 'field': 'MPI', 'maxWidth':90, 'headerClass': 'group-header-center',
+        {'headerName': 'Ind.', 'field': 'MPI', 'maxWidth':95, 'headerClass': 'group-header-center',
          "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
