@@ -118,7 +118,7 @@ gridOptions = {
     'paginationPageSize': 100,
     'cellStyle': {'fontSize': '5px'},
     'columnDefs': [
-        {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'filter': 'true', 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left'}, #85
+        {'headerName': 'Date', 'field': 'Date', 'maxWidth':90, 'filter': 'true', 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left'}, #85
         {'headerName': 'Event', 'field': 'Event', 'width':170, 'filter': 'true', 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left'}, #auto
         {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-left'}, #80
         {'headerName': 'School', 'field': 'School', 'width':190, 'pinned':'left', 'filter': 'true', 'headerClass': 'parent-header-left'}, #auto
@@ -126,7 +126,7 @@ gridOptions = {
          'cellClass': 'custom-border-right'}, #70
 
         {'headerName': 'Music', 'children': [
-        {'headerName': 'Ind.', 'field': 'MPI', 'maxWidth':95, 'headerClass': 'group-header-center',
+        {'headerName': 'Ind.', 'field': 'MPI', 'maxWidth':90, 'headerClass': 'group-header-center',
          "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
