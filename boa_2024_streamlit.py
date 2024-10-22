@@ -292,6 +292,11 @@ st.markdown(
         padding-left: 1rem;
         padding-right: 1rem;
     }
+    
+    /* Adjust the spacing between checkboxes */
+    div.stCheckbox {
+        margin-bottom: 0.5rem;  /* Adjust this value for desired spacing */
+    }
     </style>
     """,
     unsafe_allow_html=True
