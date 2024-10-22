@@ -162,27 +162,27 @@ gridOptions = {
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Vis_Avg - nodeB.data.Vis_Avg; }"}], 'headerClass': 'parent-header-center'},
 
         {'headerName': 'General Effect', 'children': [
-        {'headerName': 'Mus GE1', 'field': 'MGE1', 'maxWidth':61, 'headerClass': 'group-header-center', 'suppressMovable':'true',
+        {'headerName': 'Mus GE1', 'field': 'MGE1', 'maxWidth':63, 'headerClass': 'group-header-center', 'suppressMovable':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.MGE1.toFixed(3) + '  (' + data.MGE1_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MGE1 - nodeB.data.MGE1; }"},
-        {'headerName': 'Mus GE2', 'field': 'MGE2', 'maxWidth':61, 'headerClass': 'group-header-center', 'suppressMovable':'true',
+        {'headerName': 'Mus GE2', 'field': 'MGE2', 'maxWidth':63, 'headerClass': 'group-header-center', 'suppressMovable':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.MGE2.toFixed(3) + '  (' + data.MGE2_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VPE - nodeB.data.VPE; }"},     
-        {'headerName': 'MGE Total', 'field': 'MGE_Tot', 'maxWidth':63, 'headerClass': 'group-header-center', 'suppressMovable':'true',
+        {'headerName': 'MGE Total', 'field': 'MGE_Tot', 'maxWidth':65, 'headerClass': 'group-header-center', 'suppressMovable':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.MGE_Tot.toFixed(3) + '  (' + data.MGE_Tot_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MGE_Tot - nodeB.data.MGE_Tot; }"}, 
-        {'headerName': 'Vis GE', 'field': 'VGE', 'maxWidth':63, 'headerClass': 'group-header-center', 'suppressMovable':'true',
+        {'headerName': 'Vis GE', 'field': 'VGE', 'maxWidth':65, 'headerClass': 'group-header-center', 'suppressMovable':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.VGE.toFixed(3) + '  (' + data.VGE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VGE - nodeB.data.VGE; }"},
-        {'headerName': 'GE Total', 'field': 'GE_Tot', 'maxWidth':63, 'headerClass': 'group-header-center', 'cellClass': 'custom-border-right', 'suppressMovable':'true',
+        {'headerName': 'GE Total', 'field': 'GE_Tot', 'maxWidth':65, 'headerClass': 'group-header-center', 'cellClass': 'custom-border-right', 'suppressMovable':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.GE_Tot.toFixed(3) + '  (' + data.GE_Tot_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
@@ -203,7 +203,7 @@ gridOptions = {
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Total - nodeB.data.Total; }"},
 
-        {'headerName': 'Place: Class', 'field': 'Place_Class', 'maxWidth':63, 'valueFormatter': 'x.toFixed(0)', 'wrapHeaderText':True, 'suppressMovable':'true',
+        {'headerName': 'Place: Class', 'field': 'Place_Class', 'maxWidth':65, 'valueFormatter': 'x.toFixed(0)', 'wrapHeaderText':True, 'suppressMovable':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle','fontSize': '12px'}, 'sortable':True, 'hide':'true', 'headerClass': 'group-header-center'},
     ]
 }
