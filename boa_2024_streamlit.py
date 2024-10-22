@@ -116,7 +116,7 @@ gridOptions = {
     #'domLayout': 'autoHeight',
     'pagination': True,
     'paginationPageSize': 100,
-    'rowHeight': 100,
+    'rowHeight': 60,
     'cellStyle': {'fontSize': '5px'},
     'columnDefs': [
         {'headerName': 'Date', 'field': 'Date', 'maxWidth':90, 'filter': 'true', 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true'}, #85
@@ -132,10 +132,8 @@ gridOptions = {
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
         {'headerName': 'Ens.', 'field': 'MPE', 'maxWidth': 70,  'headerClass': 'group-header-center','suppressMovable': 'true',
-         'autoHeight': True, 'wrapText':True,
-         "valueGetter": "data.MPE.toFixed(3) + ' (' + data.MPE_Rank + ')'",
-         "sortable": True, 
-         "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPE - nodeB.data.MPE; }"},
+         'autoHeight': True, 'wrapText':True, "valueGetter": "data.MPE.toFixed(3) + ' (' + data.MPE_Rank + ')'",
+         "sortable": True, "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPE - nodeB.data.MPE; }"},
         {'headerName': 'Avg.', 'field': 'Mus_Avg', 'maxWidth':93, 'headerClass': 'group-header-center', 'cellClass': 'custom-border-right', 'suppressMovable':'true',
          'headerTextAlign':'center', "valueGetter": "data.Mus_Avg.toFixed(3) + ' (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
