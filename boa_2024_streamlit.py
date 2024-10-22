@@ -123,7 +123,7 @@ gridOptions = {
         'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'fontSize': '12px'}}, #85
         {'headerName': 'Event', 'field': 'Event', 'width':160, 'filter': 'true', 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
         'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'fontSize': '12px'}}, #auto
-        {'headerName': 'Round', 'field': 'Round', 'maxWidth':75, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
+        {'headerName': 'Round', 'field': 'Round', 'maxWidth':78, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
         'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'fontSize': '12px'}}, #80
         {'headerName': 'School', 'field': 'School', 'width':180, 'pinned':'left', 'filter': 'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
         'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'fontSize': '12px'}}, #auto
