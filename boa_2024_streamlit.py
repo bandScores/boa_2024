@@ -26,7 +26,9 @@ raw = raw.rename(columns={'P/S/F': 'Round', 'School Full':'School'})
 raw['Week'] = 'Week ' + raw['Week Num'].astype('str')
 
 #st.title("2024 BOA Scores App")
-#st.write("This app shows recaps for Bands of America events from the 2024 season. Use the drop down selectors to filter by event or show round, or leave them empty to view all scores. Click on a column header to cycle through sorting options. When hovering over a column header, click the hamburger menu on the right to view more filtering options. \n")
+#st.write("This app shows recaps for Bands of America events from the 2024 season. Use the drop down selectors to filter by event or show round, 
+#or leave them empty to view all scores. Click on a column header to cycle through sorting options. When hovering over a column header, click the 
+#hamburger menu on the right to view more filtering options. \n")
 
 cols = ['Date', 'Event', 'Round', 'School', 'Class', 
         'MPI', 'MPI Rank', 'MPE', 'MPE Rank', 'Mus Avg', 'Mus Avg Rank', 
@@ -88,6 +90,7 @@ with row_input2[0]:
         freeze = st.radio('Freeze Date, Event, Round, School, and Class columns', ['Yes', 'No (recommended for mobile users)'])
 
 with row_input2[1]:
+        st.write("Show/hide caption columms")
         show_music = st.checkbox("Music", value=True)
         show_visual = st.checkbox("Visual", value=True)
         show_ge = st.checkbox("General Effect", value=True)
@@ -139,7 +142,7 @@ gridOptions = {
         {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-center', 'suppressMovable':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'fontSize': '12px'}, 'cellClass': 'custom-border-right'}, #70
 
-        {'headerName': 'Music', 'children': [
+        {'headerName': 'Music', 'hide':'true', 'children': [
         {'headerName': 'Ind.', 'field': 'MPI', 'maxWidth':61, 'headerClass': 'group-header-center', 'suppressMovable':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.MPI.toFixed(3) + ' (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
@@ -153,7 +156,7 @@ gridOptions = {
          'wrapText':True, "valueGetter": "data.Mus_Avg.toFixed(3) + ' (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True, "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"}], 'headerClass': 'parent-header-center'},
         
-        {'headerName': 'Visual', 'children': [
+        {'headerName': 'Visual', 'hide':'true', 'children': [
         {'headerName': 'Ind.', 'field': 'VPI', 'maxWidth':61, 'headerClass': 'group-header-center', 'suppressMovable':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.VPI.toFixed(3) + '  (' + data.VPI_Rank + ')'",  # Combine Score and Rank into one string
@@ -170,7 +173,7 @@ gridOptions = {
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Vis_Avg - nodeB.data.Vis_Avg; }"}], 'headerClass': 'parent-header-center'},
 
-        {'headerName': 'General Effect', 'children': [
+        {'headerName': 'General Effect', 'hide':'true', 'children': [
         {'headerName': 'MGE1', 'field': 'MGE1', 'maxWidth':68, 'headerClass': 'group-header-center', 'suppressMovable':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.MGE1.toFixed(3) + '  (' + data.MGE1_Rank + ')'",  # Combine Score and Rank into one string
@@ -235,6 +238,15 @@ if round != "Finals":
 
 if class_ is None:
     gridOptions['columnDefs'][4].pop('hide', None)
+
+if show_music==True:
+    gridOptions['columnDefs'][5].pop('hide', None)
+
+if show_visual==True:
+    gridOptions['columnDefs'][6].pop('hide', None)
+
+if show_ge==True:
+    gridOptions['columnDefs'][7].pop('hide', None)
     
 
 custom_css = {
