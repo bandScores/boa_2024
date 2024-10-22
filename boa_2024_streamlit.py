@@ -251,8 +251,6 @@ custom_css = {
                 }}
         }
 
-#st.markdown(markdown, unsafe_allow_html=True)
-
 grid_table = AgGrid(display, 
                     gridOptions=gridOptions,
                     fit_columns_on_grid_load=False,
@@ -266,6 +264,17 @@ grid_table = AgGrid(display,
                     custom_css = custom_css
                     #style={'width': '100%', 'height': '500px'}
                    )
+
+margins_css = """
+    <style>
+        .main > div {
+            padding-left: 0rem;
+            padding-right: 0rem;
+        }
+    </style>
+"""
+
+st.markdown(margins_css, unsafe_allow_html=True)
 
 # styled_df = display.style.set_properties(**{'text-align': 'center'})
 # st.write(styled_df.to_html(index=False, justify='center'), unsafe_allow_html=True)
