@@ -87,6 +87,12 @@ row_input2 = st.columns((1,1,1))
 with row_input2[0]:
         freeze = st.radio('Freeze Date, Event, Round, School, and Class columns', ['Yes', 'No (recommended for mobile users)'])
 
+with row_input2[1]:
+        show_music = st.checkbox("Music")
+        show_visual = st.checkbox("Visual")
+        show_ge = st.checkbox("General Effect")
+        
+
 if event is None and round is None:
         if class_ is None:
                 st.write(f'<p style="font-size:20px; font-weight:bold;">All scores from all events, classes, and rounds</p>', unsafe_allow_html=True)
