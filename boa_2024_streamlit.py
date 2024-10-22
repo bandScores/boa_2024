@@ -82,8 +82,10 @@ with row_input[2]:
         fitered_string3 = 'Class=="'+class_+'"'
         display = display.query(fitered_string3)
 
-#with row_input[2]:
-freeze = st.radio('Freeze Date, Event, Round, School, and Class columns', ['Yes', 'No (recommended for mobile users)'])
+row_input2 = st.columns((1,1,1))
+
+with row_input2[0]:
+        freeze = st.radio('Freeze Date, Event, Round, School, and Class columns', ['Yes', 'No (recommended for mobile users)'])
 
 if event is None and round is None:
         if class_ is None:
