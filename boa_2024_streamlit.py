@@ -195,7 +195,7 @@ gridOptions = {
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Subtotal - nodeB.data.Subtotal; }"},
         
         {'headerName': 'Pen.', 'field': 'Pen', 'maxWidth':65, 'valueFormatter': 'x.toFixed(1)', 'sortable':True, 'headerClass': 'group-header-center', 'suppressMovable':'true',
-        'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'}},
+        'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle','fontSize': '12px'}},
         
          {'headerName': 'Total', 'field': 'Total', 'maxWidth':63, 'headerClass': 'group-header-center', 'suppressMovable':'true',
           'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
@@ -203,8 +203,8 @@ gridOptions = {
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Total - nodeB.data.Total; }"},
 
-        {'headerName': 'Place: Class', 'field': 'Place_Class', 'maxWidth':80, 'valueFormatter': 'x.toFixed(0)', 'wrapHeaderText':True, 'suppressMovable':'true',
-         'sortable':True, 'hide':'true', 'headerClass': 'group-header-center'},
+        {'headerName': 'Place: Class', 'field': 'Place_Class', 'maxWidth':63, 'valueFormatter': 'x.toFixed(0)', 'wrapHeaderText':True, 'suppressMovable':'true',
+         'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle','fontSize': '12px'}, 'sortable':True, 'hide':'true', 'headerClass': 'group-header-center'},
     ]
 }
 
