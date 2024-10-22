@@ -116,7 +116,7 @@ gridOptions = {
     #'domLayout': 'autoHeight',
     'pagination': True,
     'paginationPageSize': 100,
-    'rowHeight': 35,
+    'rowHeight': 30,
     'cellStyle': {'fontSize': '2px'},
     'columnDefs': [
         {'headerName': 'Date', 'field': 'Date', 'maxWidth':90, 'filter': 'true', 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true'}, #85
