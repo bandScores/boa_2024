@@ -88,9 +88,9 @@ with row_input2[0]:
         freeze = st.radio('Freeze Date, Event, Round, School, and Class columns', ['Yes', 'No (recommended for mobile users)'])
 
 with row_input2[1]:
-        show_music = st.checkbox("Music")
-        show_visual = st.checkbox("Visual")
-        show_ge = st.checkbox("General Effect")
+        show_music = st.checkbox("Music", value=True)
+        show_visual = st.checkbox("Visual", value=True)
+        show_ge = st.checkbox("General Effect", value=True)
         
 
 if event is None and round is None:
