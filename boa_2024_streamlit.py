@@ -125,8 +125,8 @@ gridOptions = {
         'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'fontSize': '12px'}}, #auto
         {'headerName': 'Round', 'field': 'Round', 'maxWidth':78, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
         'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'fontSize': '12px'}}, #80
-        {'headerName': 'School', 'field': 'School', 'width':180, 'pinned':'left', 'filter': 'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
-        'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'fontSize': '12px'}}, #auto
+        {'headerName': 'School', 'field': 'School', 'width':150, 'pinned':'left', 'filter': 'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
+        'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'fontSize': '12px'}, 'wrapText':True}, #auto
         {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'fontSize': '12px'}, 'cellClass': 'custom-border-right'}, #70
 
