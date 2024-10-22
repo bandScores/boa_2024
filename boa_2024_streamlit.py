@@ -16,12 +16,12 @@ st.set_page_config(layout="wide")
 #             unsafe_allow_html=True
 #         )
 
-# url = "https://docs.google.com/spreadsheets/d/1dgV0saovQ5tVe6OeGYHLaLMzh-2qq1EfUVGfQg3XRhU/edit?usp=sharing"
-# conn = st.connection("gsheets", type=GSheetsConnection)
-# raw = conn.read(spreadsheet=url)
+url = "https://docs.google.com/spreadsheets/d/1dgV0saovQ5tVe6OeGYHLaLMzh-2qq1EfUVGfQg3XRhU/edit?usp=sharing"
+conn = st.connection("gsheets", type=GSheetsConnection)
+raw = conn.read(spreadsheet=url)
 #st.dataframe(data)
 
-raw = pd.read_csv('boa_2024_oct12.csv')
+#raw = pd.read_csv('boa_2024_oct12.csv')
 raw = raw.rename(columns={'P/S/F': 'Round', 'School Full':'School'})
 raw['Week'] = 'Week ' + raw['Week Num'].astype('str')
 
