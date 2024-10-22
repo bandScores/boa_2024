@@ -127,7 +127,7 @@ gridOptions = {
         'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'fontSize': '12px'}}, #80
         {'headerName': 'School', 'field': 'School', 'width':155, 'pinned':'left', 'filter': 'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
         'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'fontSize': '12px'}}, #auto
-        {'headerName': 'Class', 'field': 'Class', 'maxWidth':68, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-center', 'suppressMovable':'true',
+        {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-center', 'suppressMovable':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'fontSize': '12px'}, 'cellClass': 'custom-border-right'}, #70
 
         {'headerName': 'Music', 'children': [
