@@ -120,15 +120,15 @@ gridOptions = {
     'cellStyle': {'fontSize': '2px'},
     'columnDefs': [
         {'headerName': 'Date', 'field': 'Date', 'maxWidth':90, 'filter': 'true', 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true', 
-        'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'}}, #85
+        'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'fontSize': '12px'}}, #85
         {'headerName': 'Event', 'field': 'Event', 'width':170, 'filter': 'true', 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
-        'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'}}, #auto
+        'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'fontSize': '12px'}}, #auto
         {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
-        'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'}}, #80
+        'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'fontSize': '12px'}}, #80
         {'headerName': 'School', 'field': 'School', 'width':190, 'pinned':'left', 'filter': 'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
-        'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'}}, #auto
+        'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'fontSize': '12px'}}, #auto
         {'headerName': 'Class', 'field': 'Class', 'maxWidth':75, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
-         'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'}, 'cellClass': 'custom-border-right'}, #70
+         'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'fontSize': '12px'}, 'cellClass': 'custom-border-right'}, #70
 
         {'headerName': 'Music', 'children': [
         {'headerName': 'Ind.', 'field': 'MPI', 'maxWidth':61, 'headerClass': 'group-header-center', 'suppressMovable':'true',
