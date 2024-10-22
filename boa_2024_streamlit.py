@@ -276,8 +276,11 @@ st.markdown(
     
     /* Optionally, reduce the top and bottom margins as well */
     .block-container {
-        padding-top: 1rem;
+        padding-top: 5rem;
         padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        
     }
     </style>
     """,
