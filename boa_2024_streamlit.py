@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder
@@ -251,6 +252,8 @@ custom_css = {
                 }}
         }
 
+#st.markdown(markdown, unsafe_allow_html=True)
+
 grid_table = AgGrid(display, 
                     gridOptions=gridOptions,
                     fit_columns_on_grid_load=False,
@@ -274,5 +277,3 @@ grid_table = AgGrid(display,
 # backgroundColor="#e6e6e6"
 # secondaryBackgroundColor="#ffffff"
 # textColor="#11364d"
-
-
