@@ -120,14 +120,14 @@ gridOptions = {
     'cellStyle': {'fontSize': '2px'},
     'columnDefs': [
         {'headerName': 'Date', 'field': 'Date', 'maxWidth':85, 'filter': 'true', 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true', 
-        'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'fontSize': '12px'}}, #85
+        'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'fontSize': '12px'}}, #85
         {'headerName': 'Event', 'field': 'Event', 'width':160, 'filter': 'true', 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
         'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'fontSize': '12px'}}, #auto
         {'headerName': 'Round', 'field': 'Round', 'maxWidth':78, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
         'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'fontSize': '12px'}}, #80
-        {'headerName': 'School', 'field': 'School', 'width':150, 'pinned':'left', 'filter': 'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
+        {'headerName': 'School', 'field': 'School', 'width':140, 'pinned':'left', 'filter': 'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
         'cellStyle': {'textAlign': 'left', 'verticalAlign': 'middle', 'fontSize': '12px', 'line-height': '1'}, 'wrapText':True, 'autoHeight':True}, #auto
-        {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
+        {'headerName': 'Class', 'field': 'Class', 'maxWidth':68, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-center', 'suppressMovable':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'fontSize': '12px'}, 'cellClass': 'custom-border-right'}, #70
 
         {'headerName': 'Music', 'children': [
