@@ -311,8 +311,8 @@ st.markdown(
     .block-container {
         padding-top: 5rem;
         padding-bottom: 3rem;
-        padding-left: 5rem;
-        padding-right: 5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
     
     /* Adjust the spacing between checkboxes */
