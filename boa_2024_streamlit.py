@@ -132,7 +132,8 @@ gridOptions = {
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
         {'headerName': 'Ens.', 'field': 'MPE', 'maxWidth':93, 'headerClass': 'group-header-center', 'suppressMovable':'true',
-         "valueGetter": "data.MPE.toFixed(3) + '<br>(' + data.MPE_Rank + ')'",  # Combine Score and Rank into one string
+         'cellRenderer': """function(params) {
+        return params.data.MPE.toFixed(3) + '<br>(' + params.data.MPE_Rank + ')';}""",   # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPE - nodeB.data.MPE; }"},     
         {'headerName': 'Avg.', 'field': 'Mus_Avg', 'maxWidth':93, 'headerClass': 'group-header-center', 'cellClass': 'custom-border-right', 'suppressMovable':'true',
