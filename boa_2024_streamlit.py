@@ -122,7 +122,7 @@ gridOptions = {
         {'headerName': 'Date', 'field': 'Date', 'maxWidth':90, 'filter': 'true', 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true'}, #85
         {'headerName': 'Event', 'field': 'Event', 'width':170, 'filter': 'true', 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true'}, #auto
         {'headerName': 'Round', 'field': 'Round', 'maxWidth':80, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true'}, #80
-        {'headerName': 'School', 'field': 'School', 'width':190, 'pinned':'left', 'filter': 'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true'}, #auto
+        {'headerName': 'School', 'field': 'School', 'width':190, 'pinned':'left', 'filter': 'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true', 'fontSize': '12px'}, #auto
         {'headerName': 'Class', 'field': 'Class', 'maxWidth':75, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true',
          'fontSize': '12px', 'cellClass': 'custom-border-right'}, #70
 
