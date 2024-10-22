@@ -172,7 +172,7 @@ gridOptions = {
          'wrapText':True, "valueGetter": "data.MGE2.toFixed(3) + '  (' + data.MGE2_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VPE - nodeB.data.VPE; }"},     
-        {'headerName': 'MGE Tot.', 'field': 'MGE_Tot', 'maxWidth':74, 'headerClass': 'group-header-center', 'suppressMovable':'true',
+        {'headerName': 'MGE Tot.', 'field': 'MGE_Tot', 'maxWidth':75, 'headerClass': 'group-header-center', 'suppressMovable':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.MGE_Tot.toFixed(3) + '  (' + data.MGE_Tot_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
