@@ -142,59 +142,59 @@ gridOptions = {
         {'headerName': 'Class', 'field': 'Class', 'maxWidth':70, 'pinned':'left', 'filter': 'true', 'hide':'true', 'headerClass': 'parent-header-center', 'suppressMovable':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'fontSize': '12px'}, 'cellClass': 'custom-border-right'}, #70
 
-        {'headerName': 'Music', 'hide':'true', 'children': [
-        {'headerName': 'Ind.', 'field': 'MPI', 'maxWidth':61, 'headerClass': 'group-header-center', 'suppressMovable':'true',
+        {'headerName': 'Music', 'children': [
+        {'headerName': 'Ind.', 'field': 'MPI', 'maxWidth':61, 'headerClass': 'group-header-center', 'suppressMovable':'true', 'hide':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.MPI.toFixed(3) + ' (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True, "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
-        {'headerName': 'Ens.', 'field': 'MPE', 'maxWidth': 61,  'headerClass': 'group-header-center', 'suppressMovable': 'true',
+        {'headerName': 'Ens.', 'field': 'MPE', 'maxWidth': 61,  'headerClass': 'group-header-center', 'suppressMovable': 'true', 'hide':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.MPE.toFixed(3) + ' (' + data.MPE_Rank + ')'",
          "sortable": True, "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPE - nodeB.data.MPE; }"},
-        {'headerName': 'Avg.', 'field': 'Mus_Avg', 'maxWidth':63, 'headerClass': 'group-header-center', 'cellClass': 'custom-border-right', 'suppressMovable':'true',
+        {'headerName': 'Avg.', 'field': 'Mus_Avg', 'maxWidth':63, 'headerClass': 'group-header-center', 'cellClass': 'custom-border-right', 'suppressMovable':'true', 'hide':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.Mus_Avg.toFixed(3) + ' (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True, "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"}], 'headerClass': 'parent-header-center'},
         
-        {'headerName': 'Visual', 'hide':'true', 'children': [
-        {'headerName': 'Ind.', 'field': 'VPI', 'maxWidth':61, 'headerClass': 'group-header-center', 'suppressMovable':'true',
+        {'headerName': 'Visual', 'children': [
+        {'headerName': 'Ind.', 'field': 'VPI', 'maxWidth':61, 'headerClass': 'group-header-center', 'suppressMovable':'true', 'hide':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.VPI.toFixed(3) + '  (' + data.VPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VPI - nodeB.data.VPI; }"},
-        {'headerName': 'Ens.', 'field': 'VPE', 'maxWidth':61, 'headerClass': 'group-header-center', 'suppressMovable':'true',
+        {'headerName': 'Ens.', 'field': 'VPE', 'maxWidth':61, 'headerClass': 'group-header-center', 'suppressMovable':'true', 'hide':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.VPE.toFixed(3) + '  (' + data.VPE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VPE - nodeB.data.VPE; }"},     
-        {'headerName': 'Avg.', 'field': 'Vis_Avg', 'maxWidth':63, 'headerClass': 'group-header-center', 'cellClass': 'custom-border-right', 'suppressMovable':'true',
+        {'headerName': 'Avg.', 'field': 'Vis_Avg', 'maxWidth':63, 'headerClass': 'group-header-center', 'cellClass': 'custom-border-right', 'suppressMovable':'true', 'hide':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.Vis_Avg.toFixed(3) + '  (' + data.Vis_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Vis_Avg - nodeB.data.Vis_Avg; }"}], 'headerClass': 'parent-header-center'},
 
-        {'headerName': 'General Effect', 'hide':'true', 'children': [
-        {'headerName': 'MGE1', 'field': 'MGE1', 'maxWidth':68, 'headerClass': 'group-header-center', 'suppressMovable':'true',
+        {'headerName': 'General Effect', 'children': [
+        {'headerName': 'MGE1', 'field': 'MGE1', 'maxWidth':68, 'headerClass': 'group-header-center', 'suppressMovable':'true', 'hide':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.MGE1.toFixed(3) + '  (' + data.MGE1_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MGE1 - nodeB.data.MGE1; }"},
-        {'headerName': 'MGE2', 'field': 'MGE2', 'maxWidth':68, 'headerClass': 'group-header-center', 'suppressMovable':'true',
+        {'headerName': 'MGE2', 'field': 'MGE2', 'maxWidth':68, 'headerClass': 'group-header-center', 'suppressMovable':'true', 'hide':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.MGE2.toFixed(3) + '  (' + data.MGE2_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VPE - nodeB.data.VPE; }"},     
-        {'headerName': 'MGE', 'field': 'MGE_Tot', 'maxWidth':68, 'headerClass': 'group-header-center', 'suppressMovable':'true',
+        {'headerName': 'MGE', 'field': 'MGE_Tot', 'maxWidth':68, 'headerClass': 'group-header-center', 'suppressMovable':'true', 'hide':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.MGE_Tot.toFixed(3) + '  (' + data.MGE_Tot_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MGE_Tot - nodeB.data.MGE_Tot; }"}, 
-        {'headerName': 'Vis GE', 'field': 'VGE', 'maxWidth':70, 'headerClass': 'group-header-center', 'suppressMovable':'true',
+        {'headerName': 'Vis GE', 'field': 'VGE', 'maxWidth':70, 'headerClass': 'group-header-center', 'suppressMovable':'true', 'hide':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.VGE.toFixed(3) + '  (' + data.VGE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.VGE - nodeB.data.VGE; }"},
-        {'headerName': 'GE Tot.', 'field': 'GE_Tot', 'maxWidth':73, 'headerClass': 'group-header-center', 'cellClass': 'custom-border-right', 'suppressMovable':'true',
+        {'headerName': 'GE Tot.', 'field': 'GE_Tot', 'maxWidth':73, 'headerClass': 'group-header-center', 'cellClass': 'custom-border-right', 'suppressMovable':'true', 'hide':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1', 'fontSize': '12px'},
          'wrapText':True, "valueGetter": "data.GE_Tot.toFixed(3) + '  (' + data.GE_Tot_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
@@ -240,13 +240,21 @@ if class_ is None:
     gridOptions['columnDefs'][4].pop('hide', None)
 
 if show_music==True:
-    gridOptions['columnDefs'][5].pop('hide', None)
+    gridOptions['columnDefs'][5]['children'][0].pop('hide', None)
+    gridOptions['columnDefs'][5]['children'][1].pop('hide', None)
+    gridOptions['columnDefs'][5]['children'][2].pop('hide', None)
 
 if show_visual==True:
-    gridOptions['columnDefs'][6].pop('hide', None)
+    gridOptions['columnDefs'][6]['children'][0].pop('hide', None)
+    gridOptions['columnDefs'][6]['children'][1].pop('hide', None)
+    gridOptions['columnDefs'][6]['children'][2].pop('hide', None)
 
 if show_ge==True:
-    gridOptions['columnDefs'][7].pop('hide', None)
+    gridOptions['columnDefs'][7]['children'][0].pop('hide', None)
+    gridOptions['columnDefs'][7]['children'][1].pop('hide', None)
+    gridOptions['columnDefs'][7]['children'][2].pop('hide', None)
+    gridOptions['columnDefs'][7]['children'][3].pop('hide', None)
+    gridOptions['columnDefs'][7]['children'][4].pop('hide', None)
     
 
 custom_css = {
