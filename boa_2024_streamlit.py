@@ -84,7 +84,7 @@ with row_input[2]:
         fitered_string3 = 'Class=="'+class_+'"'
         display = display.query(fitered_string3)
 
-row_input2 = st.columns((1,1,1))
+row_input2 = st.columns((1,1,1,1))
 
 with row_input2[0]:
         freeze = st.radio('Freeze Date, Event, Round, School, and Class columns', ['Yes', 'No (recommended for mobile users)'])
