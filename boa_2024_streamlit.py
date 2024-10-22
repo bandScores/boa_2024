@@ -295,7 +295,7 @@ st.markdown(
     
     /* Adjust the spacing between checkboxes */
     div.stCheckbox {
-        margin-bottom: 0.2rem;  /* Adjust this value for desired spacing */
+        margin-bottom: 0rem;  /* Adjust this value for desired spacing */
     }
     </style>
     """,
