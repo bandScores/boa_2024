@@ -117,7 +117,7 @@ gridOptions = {
     'pagination': True,
     'paginationPageSize': 100,
     'rowHeight': 35,
-    'cellStyle': {'fontSize': '5px'},
+    'cellStyle': {'fontSize': '4px'},
     'columnDefs': [
         {'headerName': 'Date', 'field': 'Date', 'maxWidth':90, 'filter': 'true', 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true'}, #85
         {'headerName': 'Event', 'field': 'Event', 'width':170, 'filter': 'true', 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true'}, #auto
