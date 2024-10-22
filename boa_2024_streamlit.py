@@ -116,7 +116,7 @@ gridOptions = {
     #'domLayout': 'autoHeight',
     'pagination': True,
     'paginationPageSize': 100,
-    'rowHeight': 40,
+    'rowHeight': 50,
     'cellStyle': {'fontSize': '5px'},
     'columnDefs': [
         {'headerName': 'Date', 'field': 'Date', 'maxWidth':90, 'filter': 'true', 'pinned':'left', 'hide':'true', 'headerClass': 'parent-header-left', 'suppressMovable':'true'}, #85
@@ -129,15 +129,15 @@ gridOptions = {
         {'headerName': 'Music', 'children': [
         {'headerName': 'Ind.', 'field': 'MPI', 'maxWidth':63, 'headerClass': 'group-header-center', 'suppressMovable':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1'},
-         'autoHeight':True, 'wrapText':True, "valueGetter": "data.MPI.toFixed(3) + ' (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
+         'wrapText':True, "valueGetter": "data.MPI.toFixed(3) + ' (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True, "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
         {'headerName': 'Ens.', 'field': 'MPE', 'maxWidth': 63,  'headerClass': 'group-header-center', 'suppressMovable': 'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1'},
-         'autoHeight':True, 'wrapText':True, "valueGetter": "data.MPE.toFixed(3) + ' (' + data.MPE_Rank + ')'",
+         'wrapText':True, "valueGetter": "data.MPE.toFixed(3) + ' (' + data.MPE_Rank + ')'",
          "sortable": True, "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPE - nodeB.data.MPE; }"},
-        {'headerName': 'Avg.', 'field': 'Mus_Avg', 'maxWidth':63, 'headerClass': 'group-header-center', 'cellClass': 'custom-border-right', 'suppressMovable':'true',
+        {'headerName': 'Avg.', 'field': 'Mus_Avg', 'maxWidth':65, 'headerClass': 'group-header-center', 'cellClass': 'custom-border-right', 'suppressMovable':'true',
          'cellStyle': {'textAlign': 'center', 'verticalAlign': 'middle', 'line-height': '1'},
-         'autoHeight':True, 'wrapText':True, "valueGetter": "data.Mus_Avg.toFixed(3) + ' (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
+         'wrapText':True, "valueGetter": "data.Mus_Avg.toFixed(3) + ' (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True, "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"}], 'headerClass': 'parent-header-center'},
         
         {'headerName': 'Visual', 'children': [
