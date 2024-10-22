@@ -84,15 +84,17 @@ with row_input[2]:
         fitered_string3 = 'Class=="'+class_+'"'
         display = display.query(fitered_string3)
 
-row_input2 = st.columns((1,1,1))
+row_input2 = st.columns((1,1,1,1,1))
 
 with row_input2[0]:
         freeze = st.radio('Freeze Date, Event, Round, School, and Class columns', ['Yes', 'No (recommended for mobile users)'])
-
 with row_input2[1]:
-        st.write("Show/hide caption columms")
+        st.write("Show/hide caption columms:")
+with row_input2[2]:
         show_music = st.checkbox("Music", value=True)
+with row_input2[3]:
         show_visual = st.checkbox("Visual", value=True)
+with row_input2[4]:
         show_ge = st.checkbox("General Effect", value=True)
         
 
