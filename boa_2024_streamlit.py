@@ -127,15 +127,15 @@ gridOptions = {
 
         {'headerName': 'Music', 'children': [
         {'headerName': 'Ind.', 'field': 'MPI', 'maxWidth':93, 'headerClass': 'group-header-center', 'suppressMovable':'true',
-         "valueGetter": "data.MPI.toFixed(3) + '  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
+         "valueGetter": "data.MPI.toFixed(3) + '\n  (' + data.MPI_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
         {'headerName': 'Ens.', 'field': 'MPE', 'maxWidth':93, 'headerClass': 'group-header-center', 'suppressMovable':'true',
-         "valueGetter": "data.MPE.toFixed(3) + '  (' + data.MPE_Rank + ')'",  # Combine Score and Rank into one string
+         "valueGetter": "data.MPE.toFixed(3) + '\n  (' + data.MPE_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPE - nodeB.data.MPE; }"},     
         {'headerName': 'Avg.', 'field': 'Mus_Avg', 'maxWidth':93, 'headerClass': 'group-header-center', 'cellClass': 'custom-border-right', 'suppressMovable':'true',
-         'headerTextAlign':'center', "valueGetter": "data.Mus_Avg.toFixed(3) + '  (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
+         'headerTextAlign':'center', "valueGetter": "data.Mus_Avg.toFixed(3) + '\n  (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.Mus_Avg - nodeB.data.Mus_Avg; }"}], 'headerClass': 'parent-header-center'},
         
