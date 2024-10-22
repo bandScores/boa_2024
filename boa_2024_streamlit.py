@@ -133,9 +133,9 @@ gridOptions = {
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPI - nodeB.data.MPI; }"},
         {'headerName': 'Ens.', 'field': 'MPE', 'maxWidth':93, 'headerClass': 'group-header-center', 'suppressMovable':'true',
          'cellRenderer': """function(params) {
-                var element = document.createElement('span');
-                element.innerHTML = params.data.MPE.toFixed(3) + '<br>(' + params.data.MPE_Rank + ')';
-                return element;}""",   # Combine Score and Rank into one string
+                return '<div style="white-space: normal; line-height: 1.2;">' 
+                + params.data.MPE.toFixed(3) 
+                + '<br>(' + params.data.MPE_Rank + ')' + '</div>';}""",   # Combine Score and Rank into one string
          "sortable": True,
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPE - nodeB.data.MPE; }"},     
         {'headerName': 'Avg.', 'field': 'Mus_Avg', 'maxWidth':93, 'headerClass': 'group-header-center', 'cellClass': 'custom-border-right', 'suppressMovable':'true',
