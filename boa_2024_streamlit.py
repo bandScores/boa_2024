@@ -136,7 +136,6 @@ gridOptions = {
          "valueGetter": "data.MPE.toFixed(3) + ' (' + data.MPE_Rank + ')'",
          "sortable": True, 
          "sortComparator": "function(a, b, nodeA, nodeB, isInverted) { return nodeA.data.MPE - nodeB.data.MPE; }"},
-        },     
         {'headerName': 'Avg.', 'field': 'Mus_Avg', 'maxWidth':93, 'headerClass': 'group-header-center', 'cellClass': 'custom-border-right', 'suppressMovable':'true',
          'headerTextAlign':'center', "valueGetter": "data.Mus_Avg.toFixed(3) + ' (' + data.Mus_Avg_Rank + ')'",  # Combine Score and Rank into one string
          "sortable": True,
