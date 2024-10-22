@@ -265,23 +265,23 @@ grid_table = AgGrid(display,
                     #style={'width': '100%', 'height': '500px'}
                    )
 
-st.markdown(
-    """
-    <style>
-    /* Reduce padding of the main content */
+# st.markdown(
+#     """
+#     <style>
+#     /* Reduce padding of the main content */
     
-    /* Optionally, reduce the top and bottom margins as well */
-    .block-container {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-        padding-left: 5rem;
-        padding-right: 5rem;
+#     /* Optionally, reduce the top and bottom margins as well */
+#     .block-container {
+#         padding-top: 5rem;
+#         padding-bottom: 5rem;
+#         padding-left: 5rem;
+#         padding-right: 5rem;
         
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 
 # styled_df = display.style.set_properties(**{'text-align': 'center'})
 # st.write(styled_df.to_html(index=False, justify='center'), unsafe_allow_html=True)
